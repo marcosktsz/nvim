@@ -1,6 +1,6 @@
 # nvim
 
-nvim config (thanks josea &lt;333)
+nvim config 🫡 🫡
 
 ![alt text](Screenshot.png)
 
