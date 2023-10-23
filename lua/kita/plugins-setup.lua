@@ -38,6 +38,7 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 	use("numToStr/Comment.nvim")
+	use("ThePrimeagen/harpoon")
 
 	-- status line
 	use("nvim-lualine/lualine.nvim")
