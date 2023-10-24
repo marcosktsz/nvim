@@ -39,6 +39,7 @@ return packer.startup(function(use)
 	use("vim-scripts/ReplaceWithRegister")
 	use("numToStr/Comment.nvim")
 	use("ThePrimeagen/harpoon")
+	use("stevearc/oil.nvim")
 
 	-- status line
 	use("nvim-lualine/lualine.nvim")

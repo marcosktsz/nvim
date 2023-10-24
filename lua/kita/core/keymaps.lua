@@ -41,3 +41,6 @@ keymap.set("n", "<leader>h1", ":lua require('harpoon.ui').nav_file(1)")
 keymap.set("n", "<leader>h2", ":lua require('harpoon.ui').nav_file(2)")
 keymap.set("n", "<leader>h3", ":lua require('harpoon.ui').nav_file(3)")
 keymap.set("n", "<leader>h4", ":lua require('harpoon.ui').nav_file(4)")
+
+--oil
+keymap.set("n", "<leader>oo", ":Oil --float<CR>", { desc = "Open parent directory" })
