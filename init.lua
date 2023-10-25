@@ -1,3 +1,4 @@
+-- test alias
 require("kita.core.options")
 require("kita.core.keymaps")
 require("kita.core.colorscheme")
