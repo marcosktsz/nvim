@@ -10,6 +10,7 @@ keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & heig
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>ss", ":w<CR>")
+keymap.set("n", "<leader>=", "<C-w>=")
 
 keymap.set("n", "x", '"_x')
 
