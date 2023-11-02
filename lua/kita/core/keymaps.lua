@@ -12,6 +12,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>ss", ":w<CR>")
 keymap.set("n", "<leader>=", "<C-w>=")
 
+keymap.set("n", "<leader><F5>", ":UndotreeToggle<CR>")
+
 keymap.set("n", "x", '"_x')
 
 keymap.set("n", "<leader>+", "<C-a>")
@@ -45,3 +47,5 @@ keymap.set("n", "<leader>h4", ":lua require('harpoon.ui').nav_file(4)")
 
 --oil
 keymap.set("n", "<leader>oo", ":Oil --float<CR>", { desc = "Open parent directory" })
+
+keymap.set("n", "<leader>zm", ":ZenMode<CR>")

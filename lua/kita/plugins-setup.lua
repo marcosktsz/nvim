@@ -29,6 +29,9 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-tree/nvim-tree.lua")
 	use("kyazdani42/nvim-web-devicons")
+	use("folke/zen-mode.nvim")
+	use("xiyaowong/transparent.nvim")
+	use("mbbill/undotree")
 
 	use("wbthomason/packer.nvim")
 	use("bluz71/vim-nightfly-guicolors") -- colorscheme
