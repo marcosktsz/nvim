@@ -12,6 +12,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>ss", ":w<CR>")
 keymap.set("n", "<leader>=", "<C-w>=")
 
+keymap.set("t", "<leader>qq", "<C-'><C-n>")
+
 keymap.set("n", "<leader><F5>", ":UndotreeToggle<CR>")
 
 keymap.set("n", "x", '"_x')

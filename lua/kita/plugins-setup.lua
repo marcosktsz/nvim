@@ -43,6 +43,7 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 	use("ThePrimeagen/harpoon")
 	use("stevearc/oil.nvim")
+	use("barrett-ruth/import-cost.nvim")
 
 	-- status line
 	use("nvim-lualine/lualine.nvim")
