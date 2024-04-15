@@ -1,10 +1,11 @@
 return {
 	{
-		"folke/tokyonight.nvim",
+		"nyoom-engineering/oxocarbon.nvim",
 		priority = 1000,
 
 		config = function()
-			vim.cmd([[colorscheme tokyonight-night]])
+			-- vim.cmd([[colorscheme oxocarbon]])
+			vim.cmd([[colorscheme oxocarbon]])
 		end,
 	},
 }
