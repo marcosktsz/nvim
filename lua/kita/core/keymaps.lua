@@ -55,7 +55,3 @@ km.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  
 
 km.set("v", "J", ":m '>+1<CR>gv=gv")
 km.set("v", "K", ":m '<-2<CR>gv=gv")
-km.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { noremap = true, silent = true })
-km.set("n", "<C-j>", ":TmuxNavigateDown<CR>", { noremap = true, silent = true })
-km.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { noremap = true, silent = true })
-km.set("n", "<C-k>", ":TmuxNavigateUp<CR>", { noremap = true, silent = true })
