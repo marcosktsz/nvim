@@ -17,9 +17,6 @@ km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
 km.set("n", "J", "mzJ`z")
 
--- oil
-km.set("n", "<leader>oo", "<cmd>Oil --float<CR>", { desc = "Open oil in floating mode" })
-
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
 

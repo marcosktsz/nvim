@@ -166,4 +166,6 @@ return {
 			},
 		})
 	end,
+	-- oil
+	vim.keymap.set("n", "<leader>oo", "<cmd>Oil --float<CR>", { desc = "Open oil in floating mode" }),
 }
