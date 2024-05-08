@@ -23,13 +23,7 @@ km.set("n", "<C-u>", "<C-u>zz")
 km.set("n", "n", "nzzzv")
 km.set("n", "N", "Nzzzv")
 
---ts remove unused
-km.set("n", "<leader>ru", "<cmd>TSToolsRemoveUnusedImports<CR>", { desc = "Remove unused ts imports" })
--- zenmode
-km.set("n", "<leader>zm", "<cmd>ZenMode<CR>", { desc = "Toggle zen mode" })
-
 km.set("n", "Q", "<nop>")
-km.set("n", "q", "<nop>")
 
 -- delete single character without copying into register
 km.set("n", "x", '"_x')
