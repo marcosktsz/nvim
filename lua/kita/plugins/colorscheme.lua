@@ -1,10 +1,11 @@
 return {
 	{
-		"sainnhe/everforest",
+		"sho-87/kanagawa-paper.nvim",
+		-- "shaunsingh/nord.nvim",
 		priority = 1000,
 
 		config = function()
-			vim.cmd([[colorscheme everforest]])
+			vim.cmd([[colorscheme kanagawa-paper]])
 		end,
 	},
 }

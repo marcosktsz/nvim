@@ -20,6 +20,8 @@ km.set("n", "J", "mzJ`z")
 km.set("n", "<C-d>", "<C-d>zz")
 km.set("n", "<C-u>", "<C-u>zz")
 
+km.set("i", "C-]", "<Esc>l")
+
 km.set("n", "n", "nzzzv")
 km.set("n", "N", "Nzzzv")
 

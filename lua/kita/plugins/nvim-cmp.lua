@@ -60,6 +60,9 @@ return {
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
+				formatting = {
+					format = require("nvim-highlight-colors").format,
+				},
 			},
 		})
 	end,
