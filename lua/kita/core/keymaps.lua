@@ -13,6 +13,7 @@ km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- save
 km.set("n", "<leader>ss", "<cmd>w<CR>", { desc = "save" })
+km.set("n", "<leader>SS", "<cmd>w<CR>", { desc = "save all" })
 km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
 km.set("n", "J", "mzJ`z")
