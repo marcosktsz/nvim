@@ -75,7 +75,7 @@ return {
 				["~"] = "actions.tcd",
 				["gs"] = "actions.change_sort",
 				["gx"] = "actions.open_external",
-				-- ["<C-h>"] = "actions.toggle_hidden",
+				["<C-h>"] = "actions.toggle_hidden",
 				["g\\"] = "actions.toggle_trash",
 			},
 			-- Configuration for the floating keymaps help window
