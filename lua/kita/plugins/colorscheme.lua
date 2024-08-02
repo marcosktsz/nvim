@@ -1,10 +1,9 @@
 return {
 	{
-		"zenbones-theme/zenbones.nvim",
+		"sho-87/kanagawa-paper.nvim",
 		priority = 1000,
-		dependencies = { "rktjmp/lush.nvim" },
 		config = function()
-			vim.cmd([[colorscheme forestbones]])
+			vim.cmd([[colorscheme kanagawa-paper]])
 		end,
 	},
 }
