@@ -1,4 +1,4 @@
-# Simply the most beatuiful Nvim config you'll ever witness
+# Simply the most beautiful neovim config you'll ever witness
 
 ![Alpha](./screenshots/alpha.png)
 
