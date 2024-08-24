@@ -42,13 +42,8 @@ The `<Leader>` key is set to **`space`** in this configuration.
 
    ```
 
-2. **Launch nvim and enjoy**;
+2. **Launch nvim and enjoy**
    Lazy will automatically bootstrap the preconfigured plugins
-
-   ```bash
-   nvim
-
-   ```
 
 ## Screenshots
 
