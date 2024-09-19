@@ -1,9 +1,9 @@
 return {
 	{
-		"sho-87/kanagawa-paper.nvim",
+		"nyoom-engineering/oxocarbon.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme kanagawa-paper]])
+			vim.cmd([[colorscheme oxocarbon]])
 		end,
 	},
 }
