@@ -5,7 +5,7 @@ return {
 		notify.setup({
 			render = "minimal",
 			stages = "static",
-			timeout = 1000,
+			timeout = 2500,
 		})
 	end,
 }
