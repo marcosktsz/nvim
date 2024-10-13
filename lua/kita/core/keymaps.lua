@@ -28,6 +28,9 @@ km.set("n", "N", "Nzzzv")
 
 km.set("n", "Q", "<nop>")
 
+km.set("n", "<ScrollWheelRight>", "<nop>")
+km.set("n", "<ScrollWheelLeft>", "<nop>")
+
 -- delete single character without copying into register
 km.set("n", "x", '"_x')
 
