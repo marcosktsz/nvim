@@ -43,6 +43,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
+opt.updatetime = 50
+
 opt.hlsearch = false
 opt.incsearch = true
 
