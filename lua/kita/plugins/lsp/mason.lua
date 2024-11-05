@@ -44,6 +44,7 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
+				"debugpy",
 				"pyright",
 			},
 		})
