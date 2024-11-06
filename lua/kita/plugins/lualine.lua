@@ -20,7 +20,14 @@ return {
 			return file:match("(.+)%..+$") or file
 		end
 
+		local custom_gruvbox = require("lualine.themes.iceberg_dark")
+
 		lualine.setup({
+			options = {
+				theme = custom_gruvbox,
+				section_separators = { left = " ", right = " " },
+				component_separators = { left = "|", right = "|" },
+			},
 			sections = {
 				lualine_y = {
 					{
@@ -47,7 +54,7 @@ return {
 							get_harpoon_indicator,
 						},
 						color_active = { fg = "#d1feb8" },
-						_separator = "  ",
+						_separator = " | ",
 						no_harpoon = "Harpoon not loaded",
 					},
 				},
