@@ -49,18 +49,6 @@ The `<Leader>` key is set to **`space`** in this configuration.
 - **`gd`**: Go to definition
 - **`K`**: Show documentation
 
-#### Debug Features
-
-- **`<Leader>db`**: Toggle breakpoint
-- **`<Leader>dc`**: Continue debugger
-
-#### Window Management
-
-- **`<Leader>sv`**: Split window vertically
-- **`<Leader>sh`**: Split window horizontally
-- **`<Leader>se`**: Make splits equal size
-- **`<Leader>sx`**: Close current split
-
 #### Other Features
 
 - **`<Leader>zm`**: Toggle Zen Mode
