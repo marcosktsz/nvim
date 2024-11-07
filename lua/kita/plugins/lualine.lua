@@ -20,11 +20,8 @@ return {
 			return file:match("(.+)%..+$") or file
 		end
 
-		local custom_gruvbox = require("lualine.themes.iceberg_dark")
-
 		lualine.setup({
 			options = {
-				theme = custom_gruvbox,
 				section_separators = { left = " ", right = " " },
 				component_separators = { left = "|", right = "|" },
 			},
