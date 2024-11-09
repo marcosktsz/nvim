@@ -29,6 +29,8 @@ return {
 				"isort", -- python formatter
 				"debugpy",
 				"pyright",
+        "mypy",
+        "ruff"
 			},
 		})
 	end,

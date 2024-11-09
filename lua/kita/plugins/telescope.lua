@@ -16,6 +16,7 @@ return {
 				sort_lastused = true,
 			},
 			defaults = {
+				winbled = 100,
 				path_display = { "smart" },
 				mappings = {
 					i = {
@@ -43,5 +44,6 @@ return {
 		keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope git status" })
 		keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope git branches" })
 		keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "Telescope git files" })
+		keymap.set("n", "<leader>tr", "<cmd>Telescope resume<cr>", { desc = "Resume previous telescope research" })
 	end,
 }

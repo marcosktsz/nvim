@@ -7,6 +7,7 @@ return {
 		"nvim-neotest/nvim-nio",
 	},
 	config = function()
+    require("dapui").setup()
 		local dap = require("dap")
 		local dapui = require("dapui")
 		local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
@@ -14,6 +15,8 @@ return {
 
 		vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
 		vim.keymap.set("n", "<leader>dc", dap.continue, { desc = "Debugger Continue " })
+
+    vim.keymap.set("n", "<leader>dt", function () require("dapui").toggle() end, {desc = "Toggle debugger UI"})
 
 		dap.listeners.before.attach.dapui_config = function()
 			dapui.open()
