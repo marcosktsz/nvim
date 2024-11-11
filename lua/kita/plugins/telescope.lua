@@ -12,8 +12,12 @@ return {
 
 		telescope.setup({
 			pickers = {
-				ignore_current_buffer = true,
-				sort_lastused = true,
+        ignore_current_buffer = true,
+        sort_lastused = true,
+				find_files = {
+					previewer = false, -- Disables preview for the find_files picker
+          theme = "dropdown"
+				},
 			},
 			defaults = {
 				winbled = 100,
