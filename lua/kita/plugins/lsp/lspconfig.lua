@@ -93,6 +93,19 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["basedpyright"] = function()
+				-- configure basedpyright language server
+				lspconfig["basedpyright"].setup({
+					capabilities = capabilities,
+					settings = {
+						basedpyright = {
+							analysis = {
+								typeCheckingMode = "basic"
+							}
+						}
+					}
+				})
+			end,
 			["emmet_ls"] = function()
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({

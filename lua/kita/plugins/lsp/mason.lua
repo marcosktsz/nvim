@@ -28,7 +28,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"debugpy",
-				"pyright",
+				"basedpyright",
         "mypy",
         "ruff"
 			},
