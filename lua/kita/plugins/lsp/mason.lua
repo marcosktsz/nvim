@@ -30,7 +30,8 @@ return {
 				"debugpy",
 				"basedpyright",
         "mypy",
-        "ruff"
+        "ruff",
+        "emmet-ls"
 			},
 		})
 	end,
