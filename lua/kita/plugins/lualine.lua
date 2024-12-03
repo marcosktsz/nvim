@@ -7,6 +7,9 @@ return {
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status")
+		local function maximize_status()
+			return vim.t.maximized and "Maximized   " or ""
+		end
 		local function split(str, delimiter)
 			local result = {}
 			for match in (str .. delimiter):gmatch("(.-)" .. delimiter) do
@@ -26,7 +29,8 @@ return {
 				component_separators = { left = "", right = "" },
 			},
 			sections = {
-            lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
+				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+        lualine_c = { maximize_status },
 				lualine_y = {
 					{
 						"harpoon2",
@@ -65,9 +69,9 @@ return {
 					{ "fileformat" },
 					{ "filetype" },
 				},
-        lualine_z = {
-      { 'location', separator = { right = '' }, left_padding = 2 },
-    },
+				lualine_z = {
+					{ "location", separator = { right = "" }, left_padding = 2 },
+				},
 			},
 		})
 	end,
