@@ -1,6 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
 local opt = vim.opt -- for conciseness
-vim.o.scroll = 20
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
