@@ -38,6 +38,8 @@ km.set("n", "x", '"_x')
 km.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 km.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
+km.set("n", "<C-c>", "ciw", { desc = "change inside word" })
+
 -- window management
 km.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 km.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally

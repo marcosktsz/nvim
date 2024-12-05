@@ -71,7 +71,7 @@ return {
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
-		vim.diagnostic.config({ virtual_text = false })
+		vim.diagnostic.config({ virtual_text = true })
 		-- Set underlines and undercurl for diagnostics to make them stand out
 		vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { underline = true, undercurl = true, sp = "Red" })
 		vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { underline = true, undercurl = true, sp = "Yellow" })
