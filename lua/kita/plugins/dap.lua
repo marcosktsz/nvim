@@ -13,10 +13,10 @@ return {
 		local dapui = require("dapui")
 		local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
 		require("dap-python").setup(path)
-		require("nvim-dap-virtual-text").setup()
+		require("nvim-dap-virtual-text").setup({})
 
 		-- evaluate var under cursor
-		vim.keymap.set("n", "<leader>?", function()
+		vim.keymap.set("n", "<leader>de", function()
 			require("dapui").eval(nil, { enter = true })
 		end, { desc = "Evaluate variable under cursor" })
 
