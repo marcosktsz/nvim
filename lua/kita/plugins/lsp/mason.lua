@@ -24,14 +24,14 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
+				"prettier",
+				"stylua",
+				"isort",
 				"debugpy",
 				"basedpyright",
-        "mypy",
         "ruff",
-        "emmet-ls"
+        "emmet-ls",
+        "lua-language-server"
 			},
 		})
 	end,
