@@ -9,6 +9,7 @@ This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](ht
 - Neovim >= 0.9.0
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - Required for telescope live grep
 - [fd](https://github.com/sharkdp/fd) - Required for telescope file finding
+- [lazygit](https://github.com/jesseduffield/lazygit) - Cool git integration
 - A [Nerd Font](https://www.nerdfonts.com/) - Required for icons (I recommend JetBrainsMono Nerd Font)
 
 ## Features
@@ -76,6 +77,8 @@ The `<Leader>` key is set to **`space`** in this configuration.
 - **`gr`**: Show references
 - **`gd`**: Go to definition
 - **`K`**: Show documentation
+- **`<Leader>[d or ]d`**: Next/Previous lspsaga diagnostic
+- **`<Leader>d`**: Inline lspsaga diagnostic 
 
 #### Other Features
 
@@ -89,10 +92,7 @@ The `<Leader>` key is set to **`space`** in this configuration.
 1. **Install Prerequisites**:
    ```bash
    # On macOS
-   brew install neovim ripgrep fd
-   
-   # On Ubuntu/Debian
-   sudo apt install neovim ripgrep fd-find
+   brew install neovim ripgrep fd lazygit
    ```
 
 2. **Clone the repository**:
