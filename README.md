@@ -1,8 +1,15 @@
-# Simply the most beautiful neovim config you'll ever witness
+# Simply the most swag neovim config of all time
 
 ![Screenshot](./screenshots/Screenshot.png)
 
 This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](https://github.com/folke/lazy.nvim) for plugin management. It includes a robust set of plugins and custom shortcuts tailored for an efficient coding environment.
+
+## Prerequisites
+
+- Neovim >= 0.9.0
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - Required for telescope live grep
+- [fd](https://github.com/sharkdp/fd) - Required for telescope file finding
+- A [Nerd Font](https://www.nerdfonts.com/) - Required for icons (I recommend JetBrainsMono Nerd Font)
 
 ## Features
 
@@ -21,6 +28,27 @@ This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](ht
 - **[lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)**: Git integration with LazyGit.
 - **[zen-mode.nvim](https://github.com/folke/zen-mode.nvim)**: Distraction-free coding.
 - **[flash.nvim](https://github.com/folke/flash.nvim)**: Enhanced motion and search.
+
+### Default Language Support
+
+- TypeScript/JavaScript
+- Python (with debugger support)
+- Lua
+- HTML/CSS
+- SQL (with vim-dadbod integration)
+- (Use mason to install different LSPs, linters and formatters)
+
+### Key Features
+
+- 🚀 Fast startup with lazy loading
+- 📦 Automatic plugin management
+- 🎨 Beautiful and consistent UI
+- 🔍 Powerful fuzzy finding
+- 🐛 Integrated debugging
+- 📝 Intelligent code completion
+- 🔧 Format on save
+- 🎯 Git integration
+- ⚡ Tmux/Zellij integration
 
 ### Keybindings
 
@@ -58,12 +86,29 @@ The `<Leader>` key is set to **`space`** in this configuration.
 
 ## Installation
 
-1. **Clone the repository**:
+1. **Install Prerequisites**:
+   ```bash
+   # On macOS
+   brew install neovim ripgrep fd
+   
+   # On Ubuntu/Debian
+   sudo apt install neovim ripgrep fd-find
+   ```
 
+2. **Clone the repository**:
    ```bash
    git clone https://github.com/marcosktsz/nvim ~/.config/nvim
    ```
 
-2. **Launch nvim and enjoy**
+3. **Launch and enjoy**
 
-Lazy will automatically bootstrap the preconfigured plugins
+Lazy will automatically bootstrap and install all preconfigured plugins on first launch.
+
+## Customization
+
+The configuration is organized into modules under `lua/kita/`. Key configuration files:
+
+- `lua/kita/core/options.lua`: General Neovim settings
+- `lua/kita/core/keymaps.lua`: Key mappings
+- `lua/kita/plugins/`: Individual plugin configurations
+
