@@ -32,5 +32,5 @@ return {
 			ft = { "markdown", "Avante" },
 		},
 	},
-	opts = { provider = "copilot" },
+	opts = { provider = "copilot", silent = true },
 }
