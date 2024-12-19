@@ -11,11 +11,18 @@ return {
 		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
 		{
 			"github/copilot.vim",
-			vim.keymap.set("i", "<C-f>", 'copilot#Accept("<CR>")', {
-				expr = true,
-				replace_keycodes = false,
-        silent = true,
-			}),
+			config = function()
+				local function set_copilot_keymap(mode, lhs, rhs)
+					vim.keymap.set(mode, lhs, rhs, {
+						expr = true,
+						replace_keycodes = false,
+						silent = true,
+					})
+				end
+
+				set_copilot_keymap("i", "<C-f>", 'copilot#Accept("<CR>")')
+				set_copilot_keymap("i", "<C-]>", 'copilot#Next()')
+			end,
 		},
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
