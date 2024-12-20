@@ -1,8 +1,6 @@
 return {
 	"brenoprata10/nvim-highlight-colors",
 	config = function()
-		require("nvim-highlight-colors").setup({
-      render = 'foreground'
-    })
+		require("nvim-highlight-colors").setup({ })
 	end,
 }
