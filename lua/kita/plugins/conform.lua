@@ -20,10 +20,10 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 			},
-			-- format_after_save = {
-			-- 	lsp_fallback = true,
-			-- 	async = true,
-			-- },
+			format_after_save = {
+				lsp_fallback = true,
+				async = true,
+			},
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
