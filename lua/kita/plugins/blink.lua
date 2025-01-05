@@ -35,17 +35,7 @@ return {
 						cmp.select_prev()
 					end,
 				},
-				["<Tab>"] = {
-					function(cmp)
-						cmp.select_next()
-					end,
-				},
-				["<S-Tab>"] = {
-					function(cmp)
-						cmp.select_prev()
-					end,
-				},
-				["<C-s>"] = { "show", "show_documentation", "hide_documentation" },
+				["<C-s>"] = { "show" },
 			},
 
 			appearance = {
@@ -64,6 +54,7 @@ return {
 				default = { "lsp", "path", "snippets", "buffer", "dadbod" },
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+					snippets = { min_keyword_length = 2 },
 				},
 			},
 		},
