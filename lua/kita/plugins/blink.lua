@@ -36,7 +36,7 @@ return {
 					end,
 				},
 				["<C-s>"] = { "show" },
-				["<CR>"] = { "accept", "fallback" },
+				["<CR>"] = { "select_and_accept", "fallback" },
 			},
 
 			appearance = {
