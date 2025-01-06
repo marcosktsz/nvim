@@ -27,6 +27,14 @@ return {
 			options = {
 				section_separators = { left = "", right = "" },
 				component_separators = { left = "", right = "" },
+				disabled_filetypes = {
+					"dapui_watches",
+					"dapui_breakpoints",
+					"dapui_scopes",
+					"dapui_console",
+					"dapui_stacks",
+					"dap-repl",
+				},
 			},
 			sections = {
 				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },

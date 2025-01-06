@@ -8,7 +8,32 @@ return {
 		"theHamsta/nvim-dap-virtual-text",
 	},
 	config = function()
-		require("dapui").setup()
+		require("dapui").setup({
+			layouts = {
+				{
+					elements = {
+						{
+							id = "scopes",
+							size = 0.3,
+						},
+						{
+							id = "breakpoints",
+							size = 0.3,
+						},
+						{
+							id = "watches",
+							size = 0.3,
+						},
+						{
+							id = "repl",
+							size = 0.1,
+						},
+					},
+					position = "right",
+					size = 60,
+				},
+			},
+		})
 		local dap = require("dap")
 		local dapui = require("dapui")
 		local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
