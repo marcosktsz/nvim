@@ -14,7 +14,7 @@ return {
 		dependencies = "rafamadriz/friendly-snippets",
 
 		-- use a release tag to download pre-built binaries
-		version = "*",
+		version = "0.9.0",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -24,7 +24,7 @@ return {
 			-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
 			-- See the full "keymap" documentation for information on defining your own keymap.
 			keymap = {
-				preset = "enter",
+				preset = "none",
 				["<C-j>"] = {
 					function(cmp)
 						cmp.select_next()
@@ -36,6 +36,7 @@ return {
 					end,
 				},
 				["<C-s>"] = { "show" },
+				["<CR>"] = { "accept", "fallback" },
 			},
 
 			appearance = {
