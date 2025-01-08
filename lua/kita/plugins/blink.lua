@@ -16,16 +16,8 @@ return {
 		opts = {
 			keymap = {
 				preset = "none",
-				["<C-j>"] = {
-					function(cmp)
-						cmp.select_next()
-					end,
-				},
-				["<C-k>"] = {
-					function(cmp)
-						cmp.select_prev()
-					end,
-				},
+				["<C-k>"] = { "select_prev", "fallback" },
+				["<C-j>"] = { "select_next", "fallback" },
 				["<C-s>"] = { "show" },
 				["<CR>"] = { "select_and_accept", "fallback" },
 				["<Tab>"] = { "snippet_forward", "fallback" },
