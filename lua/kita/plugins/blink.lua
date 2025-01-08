@@ -9,7 +9,7 @@ return {
 		"saghen/blink.cmp",
 		dependencies = "rafamadriz/friendly-snippets",
 
-		version = "0.9.0",
+		version = "0.10.0",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -22,6 +22,24 @@ return {
 				["<CR>"] = { "select_and_accept", "fallback" },
 				["<Tab>"] = { "snippet_forward", "fallback" },
 				["<S-Tab>"] = { "snippet_backward", "fallback" },
+
+				cmdline = {
+					preset = "none",
+					["<c-k>"] = { "select_prev", "fallback" },
+					["<c-j>"] = { "select_next", "fallback" },
+					["<CR>"] = {
+						function(cmp)
+							cmp.select_and_accept()
+							vim.schedule(function()
+								vim.api.nvim_feedkeys(
+									vim.api.nvim_replace_termcodes("<cr>", true, false, true),
+									"n",
+									false
+								)
+							end)
+						end,
+					},
+				},
 			},
 
 			appearance = {
