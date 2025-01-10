@@ -27,7 +27,7 @@ return {
 					preset = "none",
 					["<c-k>"] = { "select_prev", "fallback" },
 					["<c-j>"] = { "select_next", "fallback" },
-					["<C-y"] = { "select_and_accept", "fallback" },
+					["<C-y>"] = { "select_and_accept", "fallback" },
 					["<CR>"] = {
 						function(cmp)
 							cmp.select_and_accept()
