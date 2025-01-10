@@ -29,9 +29,8 @@ return {
 				"isort",
 				"debugpy",
 				"basedpyright",
-        "ruff",
-        "emmet-ls",
-        "lua-language-server"
+				"ruff",
+				"lua-language-server",
 			},
 		})
 	end,
