@@ -12,11 +12,11 @@ return {
 
 		telescope.setup({
 			pickers = {
-        ignore_current_buffer = true,
-        sort_lastused = true,
+				ignore_current_buffer = true,
+				sort_lastused = true,
 				find_files = {
 					previewer = false, -- Disables preview for the find_files picker
-          theme = "dropdown"
+					theme = "dropdown",
 				},
 			},
 			defaults = {
@@ -37,20 +37,12 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-		keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers" })
-
-    -- lsp stuff
-		keymap.set("n", "<leader>fw", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "LSP document symbols" })
-		keymap.set("n", "<leader>fl", "<cmd>Telescope lsp_document_symbols<cr>", { desc = "LSP declarations" })
-
-		-- git shortcuts
-		keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", { desc = "Telescope git status" })
+		keymap.set(
+			"n",
+			"<leader>fw",
+			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+			{ desc = "LSP document symbols" }
+		)
 		keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope git branches" })
-		keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { desc = "Telescope git files" })
-		keymap.set("n", "<leader>tr", "<cmd>Telescope resume<cr>", { desc = "Resume previous telescope research" })
 	end,
 }
