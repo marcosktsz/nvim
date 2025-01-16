@@ -2,7 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
@@ -11,9 +10,6 @@ return {
 
 		-- import mason_lspconfig plugin
 		local mason_lspconfig = require("mason-lspconfig")
-
-		-- import cmp-nvim-lsp plugin
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap -- for conciseness
 
@@ -68,7 +64,7 @@ return {
 		})
 
 		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		vim.diagnostic.config({ virtual_text = false })
 		-- Set underlines and undercurl for diagnostics to make them stand out
@@ -99,10 +95,10 @@ return {
 					settings = {
 						basedpyright = {
 							analysis = {
-								typeCheckingMode = "basic"
-							}
-						}
-					}
+								typeCheckingMode = "basic",
+							},
+						},
+					},
 				})
 			end,
 			["emmet_ls"] = function()

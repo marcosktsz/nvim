@@ -34,6 +34,8 @@ return {
 					"dapui_console",
 					"dapui_stacks",
 					"dap-repl",
+					"Avante",
+					"AvanteInput",
 				},
 			},
 			sections = {
