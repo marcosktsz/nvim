@@ -19,6 +19,7 @@ return {
 				graphql = { "prettier" },
 				liquid = { "prettier" },
 				lua = { "stylua" },
+				sql = { "sql_formatter" },
 			},
 			format_after_save = {
 				lsp_fallback = true,
