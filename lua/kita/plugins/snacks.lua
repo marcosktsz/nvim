@@ -259,5 +259,11 @@ return {
 			end,
 			desc = "LSP Symbols",
 		},
+		{
+			"<leader>fw",
+			function()
+				Snacks.picker.lsp_workspace_symbols()
+			end,
+		},
 	},
 }

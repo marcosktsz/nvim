@@ -37,12 +37,12 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set(
-			"n",
-			"<leader>fw",
-			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-			{ desc = "LSP document symbols" }
-		)
+		-- keymap.set(
+		-- 	"n",
+		-- 	"<leader>fw",
+		-- 	"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+		-- 	{ desc = "LSP document symbols" }
+		-- )
 		keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Telescope git branches" })
 	end,
 }
