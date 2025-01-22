@@ -1,4 +1,19 @@
+---@diagnostic disable: missing-fields
 return {
+	{
+		"slugbyte/lackluster.nvim",
+		priority = 1000,
+		init = function()
+			local lackluster = require("lackluster")
+			lackluster.setup({
+				tweak_background = {
+					normal = "none",
+					popup = "none",
+				},
+			})
+			vim.cmd.colorscheme("lackluster-night")
+		end,
+	},
 	{
 		"catppuccin/nvim",
 		priority = 1000,
@@ -56,7 +71,7 @@ return {
 			})
 
 			-- setup must be called before loading
-			vim.cmd([[colorscheme catppuccin-mocha]])
+			-- vim.cmd([[colorscheme catppuccin-mocha]])
 		end,
 	},
 }
