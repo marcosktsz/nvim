@@ -49,3 +49,5 @@ opt.incsearch = true
 
 opt.scrolloff = 999
 opt.fillchars = { eob = " " }
+
+vim.g.python3_host_prog = "/Users/marco/.asdf/shims/python"
