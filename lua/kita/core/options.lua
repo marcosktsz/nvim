@@ -47,5 +47,5 @@ opt.updatetime = 50
 opt.hlsearch = false
 opt.incsearch = true
 
-opt.scrolloff = 8
+opt.scrolloff = 999
 opt.fillchars = { eob = " " }

@@ -18,9 +18,6 @@ km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
 km.set("n", "J", "mzJ`z")
 
-km.set("n", "<C-d>", "20jzz")
-km.set("n", "<C-u>", "20kzz")
-
 km.set("i", "C-]", "<Esc>l")
 
 km.set("n", "n", "nzzzv")
