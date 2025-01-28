@@ -8,8 +8,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		dependencies = "rafamadriz/friendly-snippets",
-
-		version = "0.10.0",
+		version = "0.11.0",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -19,6 +18,8 @@ return {
 				["<C-k>"] = { "select_prev", "fallback" },
 				["<C-j>"] = { "select_next", "fallback" },
 				["<C-s>"] = { "show" },
+				["<Up>"] = { "select_prev", "fallback" },
+				["<Down>"] = { "select_next", "fallback" },
 				["<CR>"] = { "select_and_accept", "fallback" },
 				["<Tab>"] = { "snippet_forward", "fallback" },
 				["<S-Tab>"] = { "snippet_backward", "fallback" },

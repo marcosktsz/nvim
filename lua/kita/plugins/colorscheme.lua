@@ -11,7 +11,7 @@ return {
 					popup = "none",
 				},
 			})
-			vim.cmd.colorscheme("lackluster-night")
+			-- vim.cmd.colorscheme("lackluster-night")
 		end,
 	},
 	{
@@ -71,7 +71,7 @@ return {
 			})
 
 			-- setup must be called before loading
-			-- vim.cmd([[colorscheme catppuccin-mocha]])
+			vim.cmd([[colorscheme catppuccin-mocha]])
 		end,
 	},
 }
