@@ -17,7 +17,12 @@ return {
 		{
 			"<leader>fe",
 			function()
-				Snacks.picker.explorer()
+				Snacks.picker.explorer({
+					focus = "input",
+					jump = {
+						close = true,
+					},
+				})
 			end,
 		},
 		{
