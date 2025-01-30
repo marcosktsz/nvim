@@ -15,6 +15,12 @@ return {
 	},
 	keys = {
 		{
+			"<leader>fe",
+			function()
+				Snacks.picker.explorer()
+			end,
+		},
+		{
 			"<leader>st",
 			function()
 				Snacks.picker.todo_comments()
