@@ -1,3 +1,6 @@
+local function is_dap_buffer()
+	return require("cmp_dap").is_dap_buffer()
+end
 return {
 	{
 		"saghen/blink.compat",
@@ -61,12 +64,16 @@ return {
 					},
 				},
 			},
+			enabled = function()
+				return vim.bo.buftype ~= "prompt" or is_dap_buffer()
+			end,
 
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+				default = { "lsp", "path", "snippets", "buffer", "dadbod", "dap" },
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 					snippets = { min_keyword_length = 2 },
+					dap = { name = "dap", module = "blink.compat.source" },
 				},
 			},
 		},

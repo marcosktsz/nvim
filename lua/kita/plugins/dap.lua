@@ -2,6 +2,7 @@ return {
 	"mfussenegger/nvim-dap-python",
 	ft = "python",
 	dependencies = {
+		"rcarriga/cmp-dap",
 		"mfussenegger/nvim-dap",
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
@@ -21,12 +22,8 @@ return {
 							size = 0.3,
 						},
 						{
-							id = "watches",
-							size = 0.3,
-						},
-						{
 							id = "repl",
-							size = 0.1,
+							size = 0.4,
 						},
 					},
 					position = "right",
