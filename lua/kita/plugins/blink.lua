@@ -10,7 +10,7 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		dependencies = "rafamadriz/friendly-snippets",
+		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap" },
 		version = "0.11.0",
 
 		---@module 'blink.cmp'
@@ -46,7 +46,9 @@ return {
 					},
 				},
 			},
-
+			enabled = function()
+				return vim.bo.buftype ~= "prompt" or is_dap_buffer()
+			end,
 			appearance = {
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = "mono",
@@ -64,12 +66,14 @@ return {
 					},
 				},
 			},
-			enabled = function()
-				return vim.bo.buftype ~= "prompt" or is_dap_buffer()
-			end,
 
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer", "dadbod", "dap" },
+				default = function()
+					if is_dap_buffer() then
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap" }
+					end
+					return { "lsp", "path", "snippets", "buffer", "dadbod" }
+				end,
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 					snippets = { min_keyword_length = 2 },
