@@ -32,6 +32,7 @@ return {
 				"ruff",
 				"lua-language-server",
 				"sql-formatter",
+				"vtsls",
 			},
 		})
 	end,

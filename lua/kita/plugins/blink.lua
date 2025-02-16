@@ -11,11 +11,20 @@ return {
 	{
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap" },
-		version = "0.11.0",
+		version = "0.12.3",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
+			cmdline = {
+				keymap = {
+					preset = "none",
+					["<c-k>"] = { "select_prev", "fallback" },
+					["<c-j>"] = { "select_next", "fallback" },
+					["<C-y>"] = { "select_and_accept", "fallback" },
+					["<CR>"] = { "select_accept_and_enter", "fallback" },
+				},
+			},
 			keymap = {
 				preset = "none",
 				["<C-k>"] = { "select_prev", "fallback" },
@@ -26,25 +35,6 @@ return {
 				["<CR>"] = { "select_and_accept", "fallback" },
 				["<Tab>"] = { "snippet_forward", "fallback" },
 				["<S-Tab>"] = { "snippet_backward", "fallback" },
-
-				cmdline = {
-					preset = "none",
-					["<c-k>"] = { "select_prev", "fallback" },
-					["<c-j>"] = { "select_next", "fallback" },
-					["<C-y>"] = { "select_and_accept", "fallback" },
-					["<CR>"] = {
-						function(cmp)
-							cmp.select_and_accept()
-							vim.schedule(function()
-								vim.api.nvim_feedkeys(
-									vim.api.nvim_replace_termcodes("<cr>", true, false, true),
-									"n",
-									false
-								)
-							end)
-						end,
-					},
-				},
 			},
 			enabled = function()
 				return vim.bo.buftype ~= "prompt" or is_dap_buffer()
