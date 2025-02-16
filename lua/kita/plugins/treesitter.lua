@@ -37,7 +37,8 @@ return {
 				"vimdoc",
 				"c",
 				"python",
-        "sql"
+				"sql",
+				"csv",
 			},
 			incremental_selection = {
 				enable = true,
