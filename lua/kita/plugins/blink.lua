@@ -11,7 +11,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap" },
-		version = "0.12.3",
+		version = "0.12.4",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config

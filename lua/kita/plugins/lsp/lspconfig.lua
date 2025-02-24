@@ -56,7 +56,7 @@ return {
 				keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 
 				-- opts.desc = "Show documentation for what is under cursor"
-				-- keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
@@ -78,7 +78,16 @@ return {
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
 			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+			vim.diagnostic.config({
+				signs = {
+					text = {
+						error = "E",
+						warn = "W",
+						hint = "H",
+						info = "I",
+					},
+				},
+			})
 		end
 
 		mason_lspconfig.setup_handlers({
