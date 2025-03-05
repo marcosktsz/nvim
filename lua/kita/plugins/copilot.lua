@@ -15,6 +15,7 @@ return {
 
 				set_copilot_keymap("i", "<C-f>", 'copilot#Accept("<CR>")')
 				set_copilot_keymap("i", "<C-]>", 'copilot#Next()')
+				vim.g.copilot_no_tab_map = true
 			end,
 		},
       { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
