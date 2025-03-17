@@ -31,7 +31,7 @@ return {
 				"basedpyright",
 				"ruff",
 				"lua-language-server",
-				"sql-formatter",
+        "emmet-language-server",
 				"vtsls",
 			},
 		})

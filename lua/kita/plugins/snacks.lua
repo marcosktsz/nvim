@@ -76,6 +76,13 @@ return {
 			desc = "Find Files",
 		},
 		{
+			"<leader>jj",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "Find Files",
+		},
+		{
 			"<leader>fg",
 			function()
 				Snacks.picker.git_files()
