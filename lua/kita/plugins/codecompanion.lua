@@ -33,7 +33,10 @@ return {
 			},
 		})
 	end,
-	vim.keymap.set({ "n", "v" }, "<leader>kk", "<cmd>CodeCompanionChat<CR>"),
-	vim.keymap.set({ "n", "v" }, "<leader>ka", "<cmd>CodeCompanionActions<CR>"),
-	vim.keymap.set("v", "<leader>kv", "<cmd>CodeCompanionChat Add<CR>"),
+	vim.keymap.set({ "n", "v" }, "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true }),
+	vim.keymap.set({ "n", "v" }, "<leader>kk", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true }),
+	vim.keymap.set("v", "<leader>ka", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true }),
+
+	-- Expand 'cc' into 'CodeCompanion' in the command line
+	vim.cmd([[cab cc CodeCompanion]]),
 }
