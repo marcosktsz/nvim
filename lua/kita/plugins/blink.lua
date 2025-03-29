@@ -60,9 +60,9 @@ return {
 			sources = {
 				default = function()
 					if is_dap_buffer() then
-						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap" }
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "codecompanion" }
 					end
-					return { "lsp", "path", "snippets", "buffer", "dadbod" }
+					return { "lsp", "path", "snippets", "buffer", "dadbod", "codecompanion" }
 				end,
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
