@@ -1,6 +1,10 @@
 # Simply the most swag neovim config of all time
 
-![Screenshot](./screenshots/Screenshot.png)
+![Screenshot](./screenshots/main.png)
+
+![Screenshot](./screenshots/aichat.png.png)
+
+![Screenshot](./screenshots/picker.png.png)
 
 This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](https://github.com/folke/lazy.nvim) for plugin management. It includes a robust set of plugins and custom shortcuts tailored for an efficient coding environment.
 
@@ -78,7 +82,7 @@ The `<Leader>` key is set to **`space`** in this configuration.
 - **`gd`**: Go to definition
 - **`K`**: Show documentation
 - **`<Leader>[d or ]d`**: Next/Previous lspsaga diagnostic
-- **`<Leader>d`**: Inline lspsaga diagnostic 
+- **`<Leader>d`**: Inline lspsaga diagnostic
 
 #### Other Features
 
@@ -90,12 +94,14 @@ The `<Leader>` key is set to **`space`** in this configuration.
 ## Installation
 
 1. **Install Prerequisites**:
+
    ```bash
    # On macOS
    brew install neovim ripgrep fd lazygit
    ```
 
 2. **Clone the repository**:
+
    ```bash
    git clone https://github.com/marcosktsz/nvim ~/.config/nvim
    ```
@@ -111,4 +117,3 @@ The configuration is organized into modules under `lua/kita/`. Key configuration
 - `lua/kita/core/options.lua`: General Neovim settings
 - `lua/kita/core/keymaps.lua`: Key mappings
 - `lua/kita/plugins/`: Individual plugin configurations
-

@@ -19,6 +19,16 @@ return {
 				vim.g.copilot_no_tab_map = true
 			end,
 		},
+		{
+			"OXY2DEV/markview.nvim",
+			lazy = false,
+			opts = {
+				preview = {
+					filetypes = { "markdown", "codecompanion" },
+					ignore_buftypes = {},
+				},
+			},
+		},
 	},
 	config = function()
 		local codecompanion = require("codecompanion")
