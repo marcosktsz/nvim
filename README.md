@@ -2,9 +2,9 @@
 
 ![Screenshot](./screenshots/main.png)
 
-![Screenshot](./screenshots/aichat.png.png)
+![Screenshot](./screenshots/aichat.png)
 
-![Screenshot](./screenshots/picker.png.png)
+![Screenshot](./screenshots/picker.png)
 
 This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](https://github.com/folke/lazy.nvim) for plugin management. It includes a robust set of plugins and custom shortcuts tailored for an efficient coding environment.
 
