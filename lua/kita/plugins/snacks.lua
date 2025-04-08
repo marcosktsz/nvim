@@ -26,6 +26,18 @@ return {
 			end,
 		},
 		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+		},
+		{
+			"gr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+		},
+		{
 			"<leader>st",
 			function()
 				Snacks.picker.todo_comments()

@@ -71,7 +71,19 @@ return {
 			})
 
 			-- setup must be called before loading
-			vim.cmd([[colorscheme catppuccin-mocha]])
+			-- vim.cmd([[colorscheme catppuccin-mocha]])
+		end,
+	},
+	{
+		"drewxs/ash.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("ash").setup({
+				transparent = true,
+				term_colors = true,
+			})
+			vim.cmd.colorscheme("ash")
 		end,
 	},
 }
