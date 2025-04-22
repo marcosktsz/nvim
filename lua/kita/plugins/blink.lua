@@ -10,7 +10,7 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap" },
+		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap", "fang2hou/blink-copilot" },
 		version = "1.0.0",
 
 		---@module 'blink.cmp'
@@ -33,8 +33,21 @@ return {
 				["<Up>"] = { "select_prev", "fallback" },
 				["<Down>"] = { "select_next", "fallback" },
 				["<CR>"] = { "select_and_accept", "fallback" },
-				["<Tab>"] = { "snippet_forward", "fallback" },
-				["<S-Tab>"] = { "snippet_backward", "fallback" },
+				["<C-a>"] = {
+					function(cmp)
+						if vim.b[vim.api.nvim_get_current_buf()].nes_state then
+							cmp.hide()
+							return require("copilot-lsp.nes").apply_pending_nes()
+						end
+						if cmp.snippet_active() then
+							return cmp.accept()
+						else
+							return cmp.select_and_accept()
+						end
+					end,
+					"snippet_forward",
+					"fallback",
+				},
 			},
 			enabled = function()
 				return vim.bo.buftype ~= "prompt" or is_dap_buffer()
@@ -60,11 +73,12 @@ return {
 			sources = {
 				default = function()
 					if is_dap_buffer() then
-						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "avante" }
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "copilot" }
 					end
-					return { "lsp", "path", "snippets", "buffer", "dadbod", "avante" }
+					return { "lsp", "path", "snippets", "buffer", "dadbod", "copilot" }
 				end,
 				providers = {
+					copilot = { name = "copilot", module = "blink-copilot", score_offset = 100, async = true },
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 					snippets = { min_keyword_length = 2 },
 					dap = { name = "dap", module = "blink.compat.source" },
