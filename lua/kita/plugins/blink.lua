@@ -16,15 +16,6 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			cmdline = {
-				keymap = {
-					preset = "none",
-					["<c-k>"] = { "select_prev", "fallback" },
-					["<c-j>"] = { "select_next", "fallback" },
-					["<C-y>"] = { "hide", "fallback" },
-					["<CR>"] = { "select_accept_and_enter", "fallback" },
-				},
-			},
 			keymap = {
 				preset = "none",
 				["<C-k>"] = { "select_prev", "fallback" },
