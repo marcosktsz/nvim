@@ -11,7 +11,7 @@ return {
 	{
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap", "fang2hou/blink-copilot" },
-		version = "1.0.0",
+		version = "1.*",
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
