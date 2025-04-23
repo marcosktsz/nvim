@@ -64,9 +64,9 @@ return {
 			sources = {
 				default = function()
 					if is_dap_buffer() then
-						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "copilot" }
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "copilot", "codecompanion" }
 					end
-					return { "lsp", "path", "snippets", "buffer", "dadbod", "copilot" }
+					return { "lsp", "path", "snippets", "buffer", "dadbod", "copilot", "codecompanion" }
 				end,
 				providers = {
 					copilot = { name = "copilot", module = "blink-copilot", score_offset = 100, async = true },

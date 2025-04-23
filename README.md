@@ -11,8 +11,7 @@ This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](ht
 ## Prerequisites
 
 - Neovim >= 0.9.0
-- [ripgrep](https://github.com/BurntSushi/ripgrep) - Required for telescope live grep
-- [fd](https://github.com/sharkdp/fd) - Required for telescope file finding
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - Required for snacks picker live grep
 - [lazygit](https://github.com/jesseduffield/lazygit) - Cool git integration
 - A [Nerd Font](https://www.nerdfonts.com/) - Required for icons (I recommend JetBrainsMono Nerd Font)
 
@@ -20,7 +19,7 @@ This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](ht
 
 ### Key Plugins
 
-- **[Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder for files, buffers, and more.
+- **[snacks picker](https://github.com/snacks-picker/snacks-picker.nvim)**: Fuzzy finder for files, buffers, and more.
 - **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Enhanced syntax highlighting and code navigation.
 - **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Easy configuration for built-in LSP support.
 - **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Fast and customizable statusline.
@@ -48,7 +47,7 @@ This is my personal Neovim configuration for 2024, optimized with [Lazy.nvim](ht
 - 🚀 Fast startup with lazy loading
 - 📦 Automatic plugin management
 - 🎨 Beautiful and consistent UI
-- 🔍 Powerful fuzzy finding
+- 🔍 Powerful fuzzy finding with snacks picker
 - 🐛 Integrated debugging
 - 📝 Intelligent code completion
 - 🔧 Format on save
@@ -61,18 +60,18 @@ The `<Leader>` key is set to **`space`** in this configuration.
 
 #### File Navigation
 
-- **`<Leader>ff`**: Find files using Telescope
-- **`<Leader>fg`**: Live grep with Telescope
-- **`<Leader>fb`**: Find buffers with Telescope
-- **`<Leader>fr`**: Recent files with Telescope
+- **`<Leader>ff`**: Find files using snacks picker
+- **`<Leader>fg`**: Git files
+- **`<Leader>fb`**: Find buffers
+- **`<Leader>fr`**: Recent files
 - **`<Leader>oo`**: Open Oil file explorer
 
 #### Git Integration
 
 - **`<Leader>lg`**: Open LazyGit
-- **`<Leader>gs`**: Git status with Telescope
-- **`<Leader>gb`**: Git branches with Telescope
-- **`<Leader>gf`**: Git files with Telescope
+- **`<Leader>gs`**: Git status with snacks picker
+- **`<Leader>gb`**: Git branches with snacks picker
+- **`<Leader>gf`**: Git files with snacks picker
 
 #### LSP Features
 
@@ -83,6 +82,18 @@ The `<Leader>` key is set to **`space`** in this configuration.
 - **`K`**: Show documentation
 - **`<Leader>[d or ]d`**: Next/Previous lspsaga diagnostic
 - **`<Leader>d`**: Inline lspsaga diagnostic
+
+#### Debugging
+
+- **`<Leader>db`**: Toggle breakpoint
+- **`<Leader>dc`**: Start/Continue debugging
+- **`<F8>`**: Start/Continue debugging
+- **`<F9>`**: Step into
+- **`<F10>`**: Step over
+- **`<F11>`**: Step out
+- **`<Leader>de`**: Evaluate variable under cursor
+- **`<Leader>dt`**: Toggle debugger UI
+- **`<Leader>dx`**: Terminate debugger
 
 #### Other Features
 
