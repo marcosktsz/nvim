@@ -36,6 +36,7 @@ return {
 					"dap-repl",
 					"Avante",
 					"AvanteInput",
+					"AvanteSelectedFiles",
 				},
 			},
 			sections = {
