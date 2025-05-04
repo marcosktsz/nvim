@@ -1,48 +1,45 @@
 return {
-	{
-		"olimorris/codecompanion.nvim",
-		opts = {},
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			{ "nvim-tree/nvim-web-devicons", opts = {} },
-		},
-		config = function()
-			require("codecompanion").setup({
-				strategies = {
-					chat = {
-						adapter = "githubmodels",
+	"yetone/avante.nvim",
+	event = "VeryLazy",
+	version = false,
+	build = "make",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
+		"stevearc/dressing.nvim",
+		"nvim-lua/plenary.nvim",
+		"MunifTanjim/nui.nvim",
+		"echasnovski/mini.pick",
+		"nvim-telescope/telescope.nvim",
+		"hrsh7th/nvim-cmp",
+		"ibhagwan/fzf-lua",
+		"nvim-tree/nvim-web-devicons",
+		"zbirenbaum/copilot.lua",
+		{
+			"HakonHarnes/img-clip.nvim",
+			event = "VeryLazy",
+			opts = {
+				default = {
+					embed_image_as_base64 = false,
+					prompt_for_file_name = false,
+					drag_and_drop = {
+						insert_mode = true,
 					},
-					inline = {
-						adapter = "copilot",
-					},
+					use_absolute_path = true,
 				},
-			})
-			vim.keymap.set(
-				{ "n", "v" },
-				"<leader>cca",
-				"<cmd>CodeCompanionActions<cr>",
-				{ noremap = true, silent = true }
-			)
-			vim.keymap.set(
-				{ "n", "v" },
-				"<leader>ai",
-				"<cmd>CodeCompanionChat Toggle<cr>",
-				{ noremap = true, silent = true }
-			)
-			vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
-
-			vim.cmd([[cab cc CodeCompanion]])
-		end,
-	},
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		ft = { "markdown", "codecompanion" },
-		opts = {
-			render_modes = true,
-			sign = {
-				enabled = false,
 			},
+		},
+		{
+			"MeanderingProgrammer/render-markdown.nvim",
+			opts = {
+				file_types = { "markdown", "Avante" },
+			},
+			ft = { "markdown", "Avante" },
+		},
+	},
+	opts = {
+		provider = "copilot",
+		windows = {
+			width = 45,
 		},
 	},
 }

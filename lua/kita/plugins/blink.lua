@@ -10,7 +10,12 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "rcarriga/cmp-dap", "fang2hou/blink-copilot" },
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+			"rcarriga/cmp-dap",
+			"fang2hou/blink-copilot",
+			"Kaiser-Yang/blink-cmp-avante",
+		},
 		version = "1.*",
 
 		---@module 'blink.cmp'
@@ -64,9 +69,9 @@ return {
 			sources = {
 				default = function()
 					if is_dap_buffer() then
-						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "copilot", "codecompanion" }
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "copilot", "avante" }
 					end
-					return { "lsp", "path", "snippets", "buffer", "dadbod", "copilot", "codecompanion" }
+					return { "lsp", "path", "snippets", "buffer", "dadbod", "copilot", "avante" }
 				end,
 				providers = {
 					copilot = { name = "copilot", module = "blink-copilot", score_offset = 100, async = true },
