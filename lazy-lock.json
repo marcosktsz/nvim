@@ -10,6 +10,7 @@
   "copilot-lsp": { "branch": "main", "commit": "3510b84737cab09e66714fce5ba18f6249fdf60c" },
   "copilot.vim": { "branch": "release", "commit": "18f485d892b56b311fd752039d6977333ebc2a0f" },
   "csvview.nvim": { "branch": "main", "commit": "6eb9c7293d35c40a71ec1eb9c653d80e8de5a2e9" },
+  "cursortab.nvim": { "branch": "main", "commit": "3d1f8d923f168e37ed06e751ff994f8803c2aadb" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "flash.nvim": { "branch": "main", "commit": "3c942666f115e2811e959eabbdd361a025db8b63" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
