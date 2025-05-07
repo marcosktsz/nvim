@@ -93,14 +93,8 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_enable = true,
 			ensure_installed = {
-				"prettier",
-				"stylua",
-				"isort",
-				"debugpy",
 				"basedpyright",
 				"ruff",
-				"lua-language-server",
-				"emmet-language-server",
 				"vtsls",
 			},
 		})

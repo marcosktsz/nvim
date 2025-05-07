@@ -31,7 +31,8 @@ return {
 				"basedpyright",
 				"ruff",
 				"lua-language-server",
-        "emmet-language-server",
+				"emmet-language-server",
+				"tailwindcss-language-server",
 				"vtsls",
 			},
 		})
