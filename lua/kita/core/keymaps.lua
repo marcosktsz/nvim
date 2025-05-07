@@ -23,8 +23,6 @@ km.set("i", "C-]", "<Esc>l")
 km.set("n", "n", "nzzzv")
 km.set("n", "N", "Nzzzv")
 
-km.set("n", "V", "v$")
-
 km.set("n", "Q", "<nop>")
 
 km.set("n", "<ScrollWheelRight>", "<nop>")

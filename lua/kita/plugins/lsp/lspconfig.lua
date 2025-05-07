@@ -90,60 +90,58 @@ return {
 			},
 		})
 
-		mason_lspconfig.setup_handlers({
-			-- default handler for installed servers
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["basedpyright"] = function()
-				-- configure basedpyright language server
-				lspconfig["basedpyright"].setup({
-					capabilities = capabilities,
-					settings = {
-						basedpyright = {
-							analysis = {
-								typeCheckingMode = "basic",
-							},
-						},
+		require("mason-lspconfig").setup({
+			automatic_enable = true,
+			ensure_installed = {
+				"prettier",
+				"stylua",
+				"isort",
+				"debugpy",
+				"basedpyright",
+				"ruff",
+				"lua-language-server",
+				"emmet-language-server",
+				"vtsls",
+			},
+		})
+
+		vim.lsp.config("basedpyright", {
+			capabilities = capabilities,
+			settings = {
+				basedpyright = {
+					analysis = {
+						typeCheckingMode = "basic",
 					},
-				})
-			end,
-			["emmet_ls"] = function()
-				-- configure emmet language server
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"markdown",
-						"javascriptreact",
-						"css",
-						"sass",
-						"scss",
-						"less",
-						"svelte",
+				},
+			},
+		})
+		vim.lsp.config("emmet_ls", {
+			capabilities = capabilities,
+			filetypes = {
+				"html",
+				"typescriptreact",
+				"markdown",
+				"javascriptreact",
+				"css",
+				"sass",
+				"scss",
+				"less",
+				"svelte",
+			},
+		})
+		vim.lsp.config("lua_ls", {
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					-- make the language server recognize "vim" global
+					diagnostics = {
+						globals = { "vim" },
 					},
-				})
-			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
+					completion = {
+						callSnippet = "Replace",
 					},
-				})
-			end,
+				},
+			},
 		})
 	end,
 }
