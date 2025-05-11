@@ -42,7 +42,7 @@ return {
 			max_tokens = 50000,
 		},
 		windows = {
-			width = 45,
+			width = 50,
 		},
 	},
 }
