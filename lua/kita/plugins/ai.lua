@@ -44,7 +44,7 @@ return {
 			allow_insecure = true, -- Allow insecure server connections
 			timeout = 30000, -- Timeout in milliseconds
 			temperature = 0,
-			max_tokens = 20480,
+			max_tokens = 50000,
 		},
 		windows = {
 			width = 45,
