@@ -1,12 +1,11 @@
 # Simply the most swag neovim config of all time
 
-![Screenshot](./screenshots/showcase.png)
+![Screenshot](./screenshots/base.png)
+
+![Screenshot](./screenshots/debugger.png)
 
 ![Screenshot](./screenshots/ai.png)
 
-![Screenshot](./screenshots/snacks.png)
-
-![Screenshot](./screenshots/debugger.png)
 
 This is my personal Neovim configuration for 2025, using [Lazy.nvim](https://github.com/folke/lazy.nvim) for plugin management. It includes a robust set of plugins and custom shortcuts tailored for an efficient coding environment.
 

@@ -44,5 +44,6 @@ return {
 		windows = {
 			width = 50,
 		},
+    silent = true, -- Silences errors for this plugin
 	},
 }
