@@ -36,14 +36,18 @@ return {
 		},
 	},
 	opts = {
-		provider = "copilot",
-		copilot = {
-			temperature = 0,
-			max_tokens = 50000,
+		provider = "openrouter",
+		vendors = {
+			openrouter = {
+				__inherited_from = "openai",
+				endpoint = "https://openrouter.ai/api/v1",
+				model = "anthropic/claude-3.5-sonnet",
+				api_key_name = "OPENROUTER_API_KEY",
+			},
 		},
 		windows = {
 			width = 50,
 		},
-    silent = true, -- Silences errors for this plugin
+		silent = true,
 	},
 }

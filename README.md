@@ -33,6 +33,11 @@ This is my personal Neovim configuration for 2025, using [Lazy.nvim](https://git
 - **[lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)**: Git integration with LazyGit.
 - **[zen-mode.nvim](https://github.com/folke/zen-mode.nvim)**: Distraction-free coding.
 - **[flash.nvim](https://github.com/folke/flash.nvim)**: Enhanced motion and search.
+- **[conform.nvim](https://github.com/stevearc/conform.nvim)**: Fast and flexible formatter.
+- **[blink.nvim](https://github.com/folke/blink.nvim)**: Smooth cursor blink animation.
+- **[avante.nvim](https://github.com/yetone/avante.nvim)**: AI code assistance powered by OpenRouter/Claude.
+- **[copilot.lua](https://github.com/zbirenbaum/copilot.lua)**: GitHub Copilot integration.
+- **[noice.nvim](https://github.com/folke/noice.nvim)**: Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
 
 ### Default Language Support
 
