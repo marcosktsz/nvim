@@ -42,7 +42,7 @@ return {
 				openrouter = {
 					__inherited_from = "openai",
 					endpoint = "https://openrouter.ai/api/v1",
-					model = "openai/gpt-4.1",
+					model = "google/gemini-2.5-pro-preview",
 					api_key_name = "OPENROUTER_API_KEY",
 				},
 			},
