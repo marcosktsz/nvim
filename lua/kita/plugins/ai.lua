@@ -37,15 +37,15 @@ return {
 			},
 		},
 		opts = {
-			provider = "openrouter",
-			vendors = {
-				openrouter = {
-					__inherited_from = "openai",
-					endpoint = "https://openrouter.ai/api/v1",
-					model = "google/gemini-2.5-pro-preview",
-					api_key_name = "OPENROUTER_API_KEY",
-				},
-			},
+			provider = "copilot",
+			-- vendors = {
+			-- 	openrouter = {
+			-- 		__inherited_from = "openai",
+			-- 		endpoint = "https://openrouter.ai/api/v1",
+			-- 		model = "anthropic/claude-3.5-sonnet",
+			-- 		api_key_name = "OPENROUTER_API_KEY",
+			-- 	},
+			-- },
 			windows = {
 				width = 50,
 			},
