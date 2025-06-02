@@ -12,5 +12,12 @@ return {
 					)
 			end)
 		end,
+		config = function()
+			require("copilot-lsp").setup({
+				nes = {
+					move_count_threshold = 3,
+				},
+			})
+		end,
 	},
 }
