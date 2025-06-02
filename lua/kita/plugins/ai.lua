@@ -18,10 +18,6 @@ return {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
 			{
-				"MeanderingProgrammer/render-markdown.nvim",
-				ft = { "markdown", "codecompanion" },
-			},
-			{
 				"OXY2DEV/markview.nvim",
 				lazy = false,
 				opts = {
