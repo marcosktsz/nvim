@@ -46,6 +46,7 @@ This is my personal Neovim configuration for 2025, using [Lazy.nvim](https://git
 - **[lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)**: UI and UX improvements for LSP.
 - **[supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)**: Lightning-fast AI code completions.
 - **[goose.nvim](https://github.com/azorng/goose.nvim)**: Modern in-editor AI interface.
+- **[copilot-lsp](https://github.com/copilotlsp-nvim/copilot-lsp)**: GitHub Copilot LSP integration with NES (Next Edit Suggestions).
 - **[mini.diff](https://github.com/echasnovski/mini.diff)**: Minimal and fast diffs.
 - **[lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)**: Quick access to lazygit within Neovim.
 - **[context.nvim](https://github.com/nvim-treesitter/nvim-treesitter-context)**: Persistent code context for long files.
@@ -60,6 +61,7 @@ This is my personal Neovim configuration for 2025, using [Lazy.nvim](https://git
 - 🔧 Format on save
 - 🎯 Git integration
 - ⚡ Tmux/Zellij integration
+- 🤖 Multiple AI integrations (Goose, Supermaven, Copilot)
 
 ### Keybindings
 
@@ -102,6 +104,15 @@ The `<Leader>` key is set to **`space`** in this configuration.
 - **`<Leader>dt`**: Toggle debugger UI
 - **`<Leader>dx`**: Terminate debugger
 
+#### AI and Code Assistance
+
+- **`<C-g>`**: Open Goose AI input
+- **`<Leader>gos`**: Select Goose session
+- **`<C-f>`**: Accept Supermaven suggestion
+- **`<C-]>`**: Clear Supermaven suggestion
+- **`<C-w>`**: Accept Supermaven word
+- **`<C-a>`**: Apply Copilot NES (Next Edit Suggestions)
+
 #### Other Features
 
 - **`<Leader>zm`**: Toggle Zen Mode
@@ -115,7 +126,7 @@ The `<Leader>` key is set to **`space`** in this configuration.
 
    ```bash
    # On macOS
-   brew install neovim ripgrep fd lazygit
+   brew install neovim ripgrep fd lazygit goose
    ```
 
 2. **Clone the repository**:
@@ -135,3 +146,4 @@ The configuration is organized into modules under `lua/kita/`. Key configuration
 - `lua/kita/core/options.lua`: General Neovim settings
 - `lua/kita/core/keymaps.lua`: Key mappings
 - `lua/kita/plugins/`: Individual plugin configurations
+- `lua/kita/plugins/ai.lua`: AI integrations (Goose, Supermaven, Copilot)
