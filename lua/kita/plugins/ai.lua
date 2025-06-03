@@ -18,7 +18,12 @@ return {
         config = function()
           require("render-markdown").setup({
             code = {
-              disable_background = true,
+              width = 'block',
+              left_pad = 2,
+              language_name = false,
+              language_icon = false,
+              language_pad = 2,
+              disable_background = true
             }
           })
         end,
