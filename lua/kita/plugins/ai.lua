@@ -1,4 +1,23 @@
 return {
+  {
+    "azorng/goose.nvim",
+    config = function()
+      require("goose").setup({
+        ui = {
+          window_width = 0.5,
+        }
+      })
+    end,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+          anti_conceal = { enabled = false },
+        },
+      }
+    },
+  },
 	{
 		"supermaven-inc/supermaven-nvim",
 		config = function()
@@ -17,16 +36,6 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
-			{
-				"OXY2DEV/markview.nvim",
-				lazy = false,
-				opts = {
-					preview = {
-						filetypes = { "markdown", "codecompanion" },
-						ignore_buftypes = {},
-					},
-				},
-			},
 			{
 				"echasnovski/mini.diff",
 				config = function()
