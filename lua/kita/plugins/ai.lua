@@ -4,7 +4,7 @@ return {
     config = function()
       require("goose").setup({
         ui = {
-          window_width = 0.5,
+          window_width = 0.45,
         }
       })
     end,
@@ -15,6 +15,13 @@ return {
         opts = {
           anti_conceal = { enabled = false },
         },
+        config = function()
+          require("render-markdown").setup({
+            code = {
+              disable_background = true,
+            }
+          })
+        end,
       }
     },
   },
@@ -69,15 +76,6 @@ return {
 					},
 				},
 			})
-
-			-- Set up keymaps
-			vim.keymap.set(
-				{ "n", "v" },
-				"<leader>ai",
-				"<cmd>CodeCompanionChat Toggle<cr>",
-				{ noremap = true, silent = true }
-			)
-			vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
 
 			-- Expand 'cc' into 'CodeCompanion' in the command line
 			vim.cmd([[cab cc CodeCompanion]])
