@@ -3,6 +3,11 @@ return {
     "azorng/goose.nvim",
     config = function()
       require("goose").setup({
+        keymap = {
+          global = {
+            select_session = '<leader>gos',
+          }
+        },
         ui = {
           window_width = 0.45,
         }
