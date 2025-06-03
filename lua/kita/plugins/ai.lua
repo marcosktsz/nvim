@@ -1,5 +1,5 @@
 return {
-  {
+	{
 		"copilotlsp-nvim/copilot-lsp",
 		init = function()
 			vim.g.copilot_nes_debounce = 100
@@ -14,49 +14,50 @@ return {
 		end,
 		config = function()
 			require("copilot-lsp").setup({
+				---@diagnostic disable-next-line: missing-fields
 				nes = {
 					move_count_threshold = 3,
 				},
 			})
 		end,
 	},
-  {
-    "azorng/goose.nvim",
-    config = function()
-      require("goose").setup({
-        keymap = {
-          global = {
-            select_session = '<leader>gos',
-            open_input = '<C-g>',
-          }
-        },
-        ui = {
-          window_width = 0.45,
-        }
-      })
-    end,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      {
-        "MeanderingProgrammer/render-markdown.nvim",
-        opts = {
-          anti_conceal = { enabled = false },
-        },
-        config = function()
-          require("render-markdown").setup({
-            code = {
-              width = 'block',
-              left_pad = 2,
-              language_name = false,
-              language_icon = false,
-              language_pad = 2,
-              disable_background = true
-            }
-          })
-        end,
-      }
-    },
-  },
+	{
+		"azorng/goose.nvim",
+		config = function()
+			require("goose").setup({
+				keymap = {
+					global = {
+						select_session = "<leader>gos",
+						open_input = "<C-g>",
+					},
+				},
+				ui = {
+					window_width = 0.45,
+				},
+			})
+		end,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{
+				"MeanderingProgrammer/render-markdown.nvim",
+				opts = {
+					anti_conceal = { enabled = false },
+				},
+				config = function()
+					require("render-markdown").setup({
+						code = {
+							width = "block",
+							left_pad = 2,
+							language_name = false,
+							language_icon = false,
+							language_pad = 2,
+							disable_background = true,
+						},
+					})
+				end,
+			},
+		},
+	},
 	{
 		"supermaven-inc/supermaven-nvim",
 		config = function()
