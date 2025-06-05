@@ -19,37 +19,68 @@ This is my personal Neovim configuration for 2025, using [Lazy.nvim](https://git
 
 ### Key Plugins
 
-- **[snacks picker](https://github.com/snacks-picker/snacks-picker.nvim)**: Fuzzy finder for files, buffers, and more.
-- **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Enhanced syntax highlighting and code navigation.
-- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Easy configuration for built-in LSP support.
-- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Fast and customizable statusline.
-- **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)** & **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Advanced Git integration, in-line blame, and full command suite.
-- **[oil.nvim](https://github.com/stevearc/oil.nvim)**: A modern file explorer that provides an alternative to netrw.
-- **[trouble.nvim](https://github.com/folke/trouble.nvim)**: A pretty diagnostics list.
-- **[harpoon](https://github.com/ThePrimeagen/harpoon)**: Quick file navigation.
+#### Core & Navigation
+- **[snacks.nvim](https://github.com/folke/snacks.nvim)**: Multi-purpose utility plugin with fuzzy finder, picker, and terminal features.
+- **[oil.nvim](https://github.com/stevearc/oil.nvim)**: Modern file explorer that provides an alternative to netrw.
+- **[harpoon](https://github.com/ThePrimeagen/harpoon)**: Quick file navigation and bookmarking.
 - **[flash.nvim](https://github.com/folke/flash.nvim)**: Enhanced motion and search.
-- **[conform.nvim](https://github.com/stevearc/conform.nvim)**: Fast and flexible formatter.
-- **[which-key.nvim](https://github.com/folke/which-key.nvim)**: On-the-fly keybinding hints.
-- **[surround.nvim](https://github.com/kylechui/nvim-surround)**: Surround text objects easily.
-- **[comment.nvim](https://github.com/numToStr/Comment.nvim)**: Fast, context-aware commenting.
-- **[indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**: Indentation guides with context.
-- **[noice.nvim](https://github.com/folke/noice.nvim)**: Enhanced Neovim UI for command line, messages, and LSP.
-- **[dressing.nvim](https://github.com/stevearc/dressing.nvim)**: Improved prompts/UI for select/input.
-- **[ufo.nvim](https://github.com/kevinhwang91/nvim-ufo)**: Powerful code folding.
-- **[tmux.nvim](https://github.com/aserowy/tmux.nvim)**: Seamless tmux integration.
-- **[csv.nvim](https://github.com/martineausimon/nvim-csv)**: Edit and pretty print CSV files.
-- **[dadbod.nvim](https://github.com/tpope/vim-dadbod)**: Database integration (SQL inside Neovim).
-- **[blink.nvim](https://github.com/atornblad/blink.nvim)**: Improved visual motion and selection feedback.
-- **[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)**: Beautiful Markdown rendering with extensive options.
-- **[undo-tree](https://github.com/mbbill/undotree)**: Visualize and browse undo history (via an equivalent Lua plugin).
-- **[nvim-dap](https://github.com/mfussenegger/nvim-dap)**: Debug Adapter Protocol core integration.
-- **[lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)**: UI and UX improvements for LSP.
+- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)**: Fuzzy finder (used for undo history).
+
+#### AI & Code Completion
+- **[blink.cmp](https://github.com/saghen/blink.cmp)**: Fast completion engine with snippet support.
 - **[supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)**: Lightning-fast AI code completions.
 - **[goose.nvim](https://github.com/azorng/goose.nvim)**: Modern in-editor AI interface.
 - **[copilot-lsp](https://github.com/copilotlsp-nvim/copilot-lsp)**: GitHub Copilot LSP integration with NES (Next Edit Suggestions).
-- **[mini.diff](https://github.com/echasnovski/mini.diff)**: Minimal and fast diffs.
+- **[render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)**: Beautiful Markdown rendering.
+
+#### LSP & Language Support
+- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)**: Easy configuration for built-in LSP support.
+- **[mason.nvim](https://github.com/williamboman/mason.nvim)**: LSP, linter, and formatter installer.
+- **[lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)**: Enhanced LSP UI and UX improvements.
+- **[lazydev.nvim](https://github.com/folke/lazydev.nvim)**: Lua development support.
+
+#### Syntax & Treesitter
+- **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**: Enhanced syntax highlighting and code navigation.
+- **[nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)**: Auto-close HTML/XML tags.
+- **[ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)**: Context-aware commenting.
+
+#### Git Integration
+- **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)**: Git signs, hunks, and blame integration.
+- **[vim-fugitive](https://github.com/tpope/vim-fugitive)**: Comprehensive Git command suite.
 - **[lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)**: Quick access to lazygit within Neovim.
-- **[context.nvim](https://github.com/nvim-treesitter/nvim-treesitter-context)**: Persistent code context for long files.
+
+#### UI & Visual Enhancements
+- **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**: Fast and customizable statusline.
+- **[noice.nvim](https://github.com/folke/noice.nvim)**: Enhanced Neovim UI for command line, messages, and LSP.
+- **[dressing.nvim](https://github.com/stevearc/dressing.nvim)**: Improved prompts/UI for select/input.
+- **[which-key.nvim](https://github.com/folke/which-key.nvim)**: On-the-fly keybinding hints.
+- **[indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**: Indentation guides with context.
+- **[nvim-highlight-colors](https://github.com/brenoprata10/nvim-highlight-colors)**: Highlight color codes.
+
+#### Code Editing & Movement
+- **[nvim-surround](https://github.com/kylechui/nvim-surround)**: Surround text objects easily.
+- **[Comment.nvim](https://github.com/numToStr/Comment.nvim)**: Fast, context-aware commenting.
+- **[nvim-autopairs](https://github.com/windwp/nvim-autopairs)**: Auto-close brackets, quotes, etc.
+- **[nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)**: Powerful code folding.
+
+#### Formatting & Debugging
+- **[conform.nvim](https://github.com/stevearc/conform.nvim)**: Fast and flexible code formatter.
+- **[nvim-dap](https://github.com/mfussenegger/nvim-dap)**: Debug Adapter Protocol core integration.
+- **[nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)**: Debugging UI.
+- **[trouble.nvim](https://github.com/folke/trouble.nvim)**: Pretty diagnostics and quickfix list.
+
+#### Database & CSV
+- **[vim-dadbod](https://github.com/tpope/vim-dadbod)**: Database integration (SQL inside Neovim).
+- **[vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)**: Database UI interface.
+- **[csvview.nvim](https://github.com/hat0uma/csvview.nvim)**: Enhanced CSV file viewing and editing.
+
+#### Terminal & Session Management
+- **[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)**: Seamless tmux pane navigation.
+- **[zellij-nav.nvim](https://git.sr.ht/~swaits/zellij-nav.nvim)**: Zellij terminal multiplexer integration.
+
+#### Additional Utilities
+- **[todo-comments.nvim](https://github.com/folke/todo-comments.nvim)**: Highlight and navigate TODO comments.
+- **[zen-mode.nvim](https://github.com/folke/zen-mode.nvim)**: Distraction-free coding mode.
 
 ### Key Features
 
