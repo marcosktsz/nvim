@@ -39,6 +39,7 @@ return {
 			map("n", "<leader>hB", gs.toggle_current_line_blame, "Toggle line blame")
 
 			map("n", "<leader>hd", gs.diffthis, "Diff this")
+			map("n", "<leader>hi", gs.preview_hunk_inline, "Preview hunk inline")
 			map("n", "<leader>hD", function()
 				gs.diffthis("~")
 			end, "Diff this ~")
