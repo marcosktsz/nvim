@@ -3,12 +3,8 @@ vim.g.mapleader = " "
 
 local km = vim.keymap -- for conciseness
 
----------------------
--- General Keymaps -------------------
+--------------------- General Keymaps -------------------
 
--- use jk to exit insert mode
-
--- clear search highlights
 km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- save
@@ -16,6 +12,7 @@ km.set("n", "<leader>ss", "<cmd>w<CR>", { desc = "save" })
 km.set("n", "<leader>SS", "<cmd>w<CR>", { desc = "save all" })
 km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
+-- copy current relative file path to clipboard
 vim.api.nvim_set_keymap("n", "<leader>cp", [[:let @+ = expand('%:.')<CR>]], { noremap = true, silent = true })
 
 km.set("n", "J", "mzJ`z")
