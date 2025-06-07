@@ -12,8 +12,11 @@ km.set("n", "<leader>ss", "<cmd>w<CR>", { desc = "save" })
 km.set("n", "<leader>SS", "<cmd>w<CR>", { desc = "save all" })
 km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
--- copy current relative file path to clipboard
-vim.api.nvim_set_keymap("n", "<leader>cp", [[:let @+ = expand('%:.')<CR>]], { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>cp", function()
+	local path = vim.fn.expand("%:.")
+	vim.fn.setreg("+", path) -- copy to clipboard
+	vim.notify("Copied: " .. path, vim.log.levels.INFO, { title = "File Path" })
+end, { noremap = true, silent = true })
 
 km.set("n", "J", "mzJ`z")
 
