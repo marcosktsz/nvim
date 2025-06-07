@@ -16,6 +16,8 @@ km.set("n", "<leader>ss", "<cmd>w<CR>", { desc = "save" })
 km.set("n", "<leader>SS", "<cmd>w<CR>", { desc = "save all" })
 km.set("n", "<leader>qqq", "<cmd>qa<CR>", { desc = "quit all" })
 
+vim.api.nvim_set_keymap("n", "<leader>cp", [[:let @+ = expand('%:.')<CR>]], { noremap = true, silent = true })
+
 km.set("n", "J", "mzJ`z")
 
 km.set("i", "C-]", "<Esc>l")
