@@ -36,6 +36,11 @@ return {
 		require("dap-python").setup(path)
 		require("nvim-dap-virtual-text").setup({})
 
+		vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DiagnosticError", linehl = "", numhl = "" })
+		vim.fn.sign_define("DapBreakpointCondition", { text = "◉", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
+		vim.fn.sign_define("DapStopped", { text = "▶", texthl = "DiagnosticOk", linehl = "", numhl = "" })
+		vim.fn.sign_define("DapBreakpointRejected", { text = "✕", texthl = "DiagnosticError", linehl = "", numhl = "" })
+
 		-- JavaScript setup
 		dap.adapters["pwa-node"] = {
 			type = "server",
