@@ -38,6 +38,11 @@ return {
 					"AvanteInput",
 					"AvanteSelectedFiles",
 				},
+				refresh = {
+					statusline = 100,
+					tabline = 100,
+					winbar = 100,
+				},
 			},
 			sections = {
 				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
@@ -71,6 +76,16 @@ return {
 					},
 				},
 				lualine_x = {
+					{
+						function()
+							local reg = vim.fn.reg_recording()
+							if reg == "" then
+								return ""
+							end
+							return "recording @" .. reg
+						end,
+						color = { fg = "#ff9e64" },
+					},
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
