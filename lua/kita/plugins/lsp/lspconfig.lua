@@ -99,6 +99,12 @@ return {
 			},
 		})
 
+    vim.lsp.inline_completion.enable()
+
+    vim.lsp.config('copilot', {
+      cmd = { 'copilot-language-server', '--stdio',},
+      root_markers = { '.git' }
+    })
 		vim.lsp.config("basedpyright", {
 			capabilities = capabilities,
 			settings = {
@@ -137,5 +143,6 @@ return {
 				},
 			},
 		})
+    vim.lsp.enable('copilot')
 	end,
 }

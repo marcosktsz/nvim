@@ -1,15 +1,34 @@
 return {
 	{
-		"supermaven-inc/supermaven-nvim",
-		config = function()
-			require("supermaven-nvim").setup({
-				keymaps = {
-					accept_suggestion = "<C-f>",
-					clear_suggestion = "<C-]>",
-					accept_word = "<C-w>",
+		"folke/sidekick.nvim",
+		event = "VeryLazy",
+		opts = {
+			cli = {
+				mux = {
+					backend = "tmux",
+					enabled = true,
 				},
-			})
-		end,
+			},
+		},
+		keys = {
+			{
+				"<tab>",
+				function()
+					if require("sidekick").nes_jump_or_apply() then
+						return -- jumped or applied
+					end
+
+					if vim.lsp.inline_completion.get() then
+						return
+					end
+
+					return "<tab>"
+				end,
+				mode = { "i", "n" },
+				expr = true,
+				desc = "Goto/Apply Next Edit Suggestion",
+			},
+		},
 	},
 	{
 		"NickvanDyke/opencode.nvim",

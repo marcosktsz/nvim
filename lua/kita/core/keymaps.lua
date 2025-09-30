@@ -4,6 +4,12 @@ vim.g.mapleader = " "
 local km = vim.keymap -- for conciseness
 
 --------------------- General Keymaps -------------------
+---
+vim.keymap.set("i", "<Tab>", function()
+	if not vim.lsp.inline_completion.get() then
+		return "<Tab>"
+	end
+end, { expr = true, desc = "Accept the current inline completion" })
 
 km.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
