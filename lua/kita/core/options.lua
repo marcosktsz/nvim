@@ -51,3 +51,4 @@ opt.scrolloff = 999
 opt.fillchars = { eob = " " }
 
 vim.g.python3_host_prog = "/Users/marco/.asdf/shims/python"
+vim.g.node_host_prog = '/opt/homebrew/bin/node'
