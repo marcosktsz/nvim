@@ -3,6 +3,12 @@ return {
 		"folke/sidekick.nvim",
 		event = "VeryLazy",
 		opts = {
+			nes = {
+				debounce = 75,
+				trigger = {
+					events = { "InsertEnter", "TextChangedI", "TextChanged", "User SidekickNesDone", "InsertLeave" },
+				},
+			},
 			cli = {
 				mux = {
 					backend = "tmux",
@@ -12,7 +18,7 @@ return {
 		},
 		keys = {
 			{
-				"<C-f>",
+				"<Tab>",
 				function()
 					if require("sidekick").nes_jump_or_apply() then
 						return -- jumped or applied
@@ -22,7 +28,7 @@ return {
 						return
 					end
 
-					return "<C-f>"
+					return "<Tab>"
 				end,
 				mode = { "i", "n" },
 				expr = true,
