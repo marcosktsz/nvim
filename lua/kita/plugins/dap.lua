@@ -1,11 +1,12 @@
 return {
 	"mfussenegger/nvim-dap-python",
 	ft = { "python", "javascript" },
+	build = false,
 	dependencies = {
-		"mfussenegger/nvim-dap",
-		"rcarriga/nvim-dap-ui",
-		"nvim-neotest/nvim-nio",
-		"theHamsta/nvim-dap-virtual-text",
+		{ "mfussenegger/nvim-dap", build = false },
+		{ "rcarriga/nvim-dap-ui", build = false },
+		{ "nvim-neotest/nvim-nio", build = false },
+		{ "theHamsta/nvim-dap-virtual-text", build = false },
 	},
 	config = function()
 		require("dapui").setup({
