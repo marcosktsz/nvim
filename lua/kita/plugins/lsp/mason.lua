@@ -24,6 +24,7 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+        "copilot-language-server",
 				"prettier",
 				"stylua",
 				"isort",
