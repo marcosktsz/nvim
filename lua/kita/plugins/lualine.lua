@@ -25,8 +25,8 @@ return {
 
 		lualine.setup({
 			options = {
-				section_separators = { left = "", right = "" },
-				component_separators = { left = "", right = "" },
+				-- section_separators = { left = "", right = "" },
+				-- component_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					"dapui_watches",
 					"dapui_breakpoints",
@@ -34,9 +34,6 @@ return {
 					"dapui_console",
 					"dapui_stacks",
 					"dap-repl",
-					"Avante",
-					"AvanteInput",
-					"AvanteSelectedFiles",
 				},
 				refresh = {
 					statusline = 100,
@@ -45,7 +42,7 @@ return {
 				},
 			},
 			sections = {
-				lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+				lualine_a = { { "mode", right_padding = 2 } },
 				lualine_y = {
 					{
 						"harpoon2",
@@ -95,7 +92,7 @@ return {
 					{ "filetype" },
 				},
 				lualine_z = {
-					{ "location", separator = { right = "" }, left_padding = 2 },
+					{ "location", left_padding = 2 },
 				},
 			},
 		})

@@ -13,7 +13,6 @@ return {
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 			"rcarriga/cmp-dap",
-			"Kaiser-Yang/blink-cmp-avante",
 		},
 		version = "1.*",
 
@@ -68,21 +67,14 @@ return {
 			sources = {
 				default = function()
 					if is_dap_buffer() then
-						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap", "avante" }
+						return { "lsp", "path", "snippets", "buffer", "dadbod", "dap" }
 					end
-					return { "lsp", "path", "snippets", "buffer", "dadbod", "avante" }
+					return { "lsp", "path", "snippets", "buffer", "dadbod" }
 				end,
 				providers = {
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 					snippets = { min_keyword_length = 2 },
 					dap = { name = "dap", module = "blink.compat.source" },
-					avante = {
-						module = "blink-cmp-avante",
-						name = "Avante",
-						opts = {
-							-- options for blink-cmp-avante
-						},
-					},
 				},
 			},
 		},
