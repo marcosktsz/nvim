@@ -106,4 +106,4 @@ function! HarpoonStatus()
 endfunction
 ]])
 
-opt.statusline = "%t %{FugitiveHead()} %m %= %{HarpoonStatus()} %l,%c %P"
+opt.statusline = "%t [%{FugitiveHead()}] %m %= %{HarpoonStatus()} %l,%c %P"
