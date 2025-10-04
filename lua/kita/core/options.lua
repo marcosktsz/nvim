@@ -51,4 +51,59 @@ opt.scrolloff = 999
 opt.fillchars = { eob = " " }
 
 vim.g.python3_host_prog = "/Users/marco/.asdf/shims/python"
-vim.g.node_host_prog = '/opt/homebrew/bin/node'
+vim.g.node_host_prog = "/opt/homebrew/bin/node"
+
+local function split(str, delimiter)
+	local result = {}
+	for match in (str .. delimiter):gmatch("(.-)" .. delimiter) do
+		table.insert(result, match)
+	end
+	return result
+end
+
+local function get_harpoon_indicator(harpoon_entry)
+	local array = split(harpoon_entry.value, "/")
+	local file = array[#array]
+	return file:match("(.+)%..+$") or file
+end
+
+-- Function to get Harpoon status for statusline
+_G.get_harpoon_status = function()
+	local ok, harpoon = pcall(require, "harpoon")
+	if not ok then
+		return ""
+	end
+
+	local list = harpoon:list()
+	local items = list.items or {}
+	local current_file = vim.fn.expand("%:p")
+
+	local status = {}
+	for i, item in ipairs(items) do
+		if i > 8 then
+			break
+		end -- limit to 8 items
+		local file_path = item.value
+		local indicator = get_harpoon_indicator(item)
+
+		if file_path == current_file then
+			table.insert(status, "[" .. indicator .. "]")
+		else
+			table.insert(status, indicator)
+		end
+	end
+
+	if #status > 0 then
+		return "♥  " .. table.concat(status, " | ") .. " "
+	end
+	return ""
+end
+
+-- Create Vimscript wrapper
+vim.cmd([[
+function! HarpoonStatus()
+	return v:lua.get_harpoon_status()
+endfunction
+]])
+
+opt.statusline = "%t %{FugitiveHead()} %m %= %{HarpoonStatus()} %l,%c %P"
