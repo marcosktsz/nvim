@@ -49,11 +49,11 @@ return {
 				keymap.set("n", "<leader>dn", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 
 				opts.desc = "Go to previous diagnostic"
-				keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to next diagnostic in buffer
+				keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 				-- keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
 
 				opts.desc = "Go to next diagnostic"
-				keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+				keymap.set("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 
 				-- opts.desc = "Show documentation for what is under cursor"
 				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
@@ -99,12 +99,12 @@ return {
 			},
 		})
 
-    vim.lsp.inline_completion.enable()
+		vim.lsp.inline_completion.enable()
 
-    vim.lsp.config('copilot', {
-      cmd = { 'copilot-language-server', '--stdio',},
-      root_markers = { '.git' }
-    })
+		vim.lsp.config("copilot", {
+			cmd = { "copilot-language-server", "--stdio" },
+			root_markers = { ".git" },
+		})
 		vim.lsp.config("basedpyright", {
 			capabilities = capabilities,
 			settings = {
@@ -143,6 +143,6 @@ return {
 				},
 			},
 		})
-    vim.lsp.enable('copilot')
+		vim.lsp.enable("copilot")
 	end,
 }

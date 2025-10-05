@@ -20,8 +20,8 @@ return {
 			map("n", "<leader>hn", gs.next_hunk, "Next Hunk")
 			map("n", "<leader>hp", gs.prev_hunk, "Prev Hunk")
 
-			map("n", "]h", gs.next_hunk, "Next Hunk")
-			map("n", "[h", gs.prev_hunk, "Prev Hunk")
+			map("n", "gn", gs.next_hunk, "Next Hunk")
+			map("n", "gp", gs.prev_hunk, "Prev Hunk")
 
 			-- Actions
 			map("n", "<leader>hs", gs.stage_hunk, "Stage hunk")
