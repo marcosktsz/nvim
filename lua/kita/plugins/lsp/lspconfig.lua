@@ -103,7 +103,7 @@ return {
 
 		vim.lsp.config("copilot", {
 			cmd = { "copilot-language-server", "--stdio" },
-			root_markers = { ".git" },
+			-- root_markers = { ".git" },
 		})
 		vim.lsp.config("basedpyright", {
 			capabilities = capabilities,
