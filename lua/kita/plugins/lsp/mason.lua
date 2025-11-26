@@ -24,11 +24,12 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-        "copilot-language-server",
+				"copilot-language-server",
 				"prettier",
 				"stylua",
 				"isort",
 				"debugpy",
+				"js-debug-adapter",
 				"basedpyright",
 				"ruff",
 				"lua-language-server",
