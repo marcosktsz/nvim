@@ -1,6 +1,6 @@
 return {
 	"mfussenegger/nvim-dap-python",
-	ft = { "python", "javascript" },
+	ft = { "python", "javascript", "typescript" },
 	build = false,
 	dependencies = {
 		{ "mfussenegger/nvim-dap", build = false },
@@ -53,7 +53,37 @@ return {
 			}
 		}
 
+    dap.configurations.python = {
+			{
+        justMyCode = false,
+				type = "python",
+				request = "attach",
+				name = "Attach to Port",
+        port = 5678,
+			}
+		}
+
+
 		dap.configurations.javascript = {
+			{
+				type = "pwa-node",
+				request = "attach",
+				name = "Attach to Port",
+				port = 9229,
+				cwd = "${workspaceFolder}",
+				sourceMaps = true,
+				resolveSourceMapLocations = {
+					"${workspaceFolder}/**",
+					"!**/node_modules/**"
+				},
+				skipFiles = {
+					"<node_internals>/**",
+					"**/node_modules/**"
+				}
+			}
+		}
+
+	dap.configurations.typescript = {
 			{
 				type = "pwa-node",
 				request = "attach",
