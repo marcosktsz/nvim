@@ -4,7 +4,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			nes = {
-				debounce = 75,
+				debounce = 50,
 				trigger = {
 					events = { "InsertEnter", "TextChangedI", "TextChanged", "User SidekickNesDone", "InsertLeave" },
 				},
