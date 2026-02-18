@@ -24,7 +24,6 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"copilot-language-server",
 				"prettier",
 				"stylua",
 				"isort",
@@ -35,7 +34,7 @@ return {
 				"lua-language-server",
 				"emmet-language-server",
 				"tailwindcss-language-server",
-				"vtsls",
+				"tsgo",
 			},
 		})
 	end,

@@ -95,20 +95,11 @@ return {
 			ensure_installed = {
 				"basedpyright",
 				"ruff",
-				"vtsls",
+				"tsgo",
 			},
 		})
 
 		vim.lsp.inline_completion.enable()
-
-		vim.lsp.config("copilot", {
-			cmd = { "copilot-language-server", "--stdio" },
-			settings = {
-				telemetry = {
-					telemetryLevel = "off",
-				},
-			},
-		})
 		vim.lsp.config("basedpyright", {
 			capabilities = capabilities,
 			settings = {
@@ -147,6 +138,5 @@ return {
 				},
 			},
 		})
-		vim.lsp.enable("copilot")
 	end,
 }
