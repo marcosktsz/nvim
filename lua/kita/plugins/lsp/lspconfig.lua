@@ -94,7 +94,6 @@ return {
 			automatic_enable = true,
 			ensure_installed = {
 				"ty",
-				"ruff",
 				"tsgo",
 			},
 		})

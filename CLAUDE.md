@@ -9,6 +9,7 @@ This is a personal Neovim configuration powered by Lazy.nvim plugin manager. The
 ## Architecture
 
 ### Core Structure
+
 - **Entry point**: `init.lua` - loads `kita.core` and `kita.lazy`
 - **Core configuration**: `lua/kita/core/`
   - `options.lua` - Neovim settings (2-space tabs, relative numbers, etc.)
@@ -18,6 +19,7 @@ This is a personal Neovim configuration powered by Lazy.nvim plugin manager. The
 - **LSP configurations**: `lua/kita/plugins/lsp/` - Language server setups
 
 ### Key Configuration Details
+
 - Uses 2-space indentation for all files
 - Leader key is space
 - Python host program: `/Users/marco/.asdf/shims/python`
@@ -27,6 +29,7 @@ This is a personal Neovim configuration powered by Lazy.nvim plugin manager. The
 ## Plugin Ecosystem
 
 ### Core Plugins
+
 - **snacks.nvim**: Main fuzzy finder and picker
 - **oil.nvim**: File explorer (replaces netrw)
 - **blink.cmp**: Completion engine
@@ -37,9 +40,11 @@ This is a personal Neovim configuration powered by Lazy.nvim plugin manager. The
 - **lazygit.nvim**: Git interface
 
 ### Installed Language Servers & Tools
+
 Via mason-tool-installer:
+
 - prettier, stylua, isort, debugpy
-- basedpyright, ruff (Python)
+- py
 - lua-language-server
 - emmet-language-server
 - tailwindcss-language-server
@@ -48,6 +53,7 @@ Via mason-tool-installer:
 ## Development Commands
 
 ### Plugin Management
+
 ```bash
 # Open Neovim (plugins auto-install on first run)
 nvim
@@ -60,12 +66,14 @@ nvim
 ```
 
 ### Formatting
+
 ```bash
 # Format current file/selection (within Neovim)
 <leader>mp  # Uses conform.nvim with prettier/stylua/etc.
 ```
 
 ### Git Workflow
+
 ```bash
 # Open LazyGit interface
 <leader>lg
@@ -77,6 +85,7 @@ nvim
 ```
 
 ### Key Keybindings
+
 - `<leader>ff` - Find files (snacks picker)
 - `<leader>oo` - Open Oil file explorer
 - `<leader>ca` - Code actions (LSP)
@@ -89,6 +98,7 @@ nvim
 ## File Organization
 
 When modifying this config:
+
 - Add new plugins to `lua/kita/plugins/`
 - LSP configs go in `lua/kita/plugins/lsp/`
 - Core settings in `lua/kita/core/`
@@ -110,4 +120,3 @@ When modifying this config:
 - AI completion with Supermaven
 - Built-in debugging with nvim-dap
 - Database tools (vim-dadbod)
-

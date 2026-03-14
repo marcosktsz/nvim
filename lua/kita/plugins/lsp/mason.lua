@@ -30,7 +30,6 @@ return {
 				"debugpy",
 				"js-debug-adapter",
 				"ty",
-				"ruff",
 				"lua-language-server",
 				"emmet-language-server",
 				"tailwindcss-language-server",
