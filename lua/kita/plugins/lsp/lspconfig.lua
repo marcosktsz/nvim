@@ -93,20 +93,18 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_enable = true,
 			ensure_installed = {
-				"basedpyright",
+				"ty",
 				"ruff",
 				"tsgo",
 			},
 		})
 
 		vim.lsp.inline_completion.enable()
-		vim.lsp.config("basedpyright", {
+		vim.lsp.config("ty", {
 			capabilities = capabilities,
 			settings = {
-				basedpyright = {
-					analysis = {
-						typeCheckingMode = "basic",
-					},
+				ty = {
+					diagnosticMode = "workspace",
 				},
 			},
 		})

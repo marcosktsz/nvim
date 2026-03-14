@@ -29,7 +29,7 @@ return {
 				"isort",
 				"debugpy",
 				"js-debug-adapter",
-				"basedpyright",
+				"ty",
 				"ruff",
 				"lua-language-server",
 				"emmet-language-server",
