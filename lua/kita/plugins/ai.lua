@@ -4,8 +4,8 @@ return {
 	config = function()
 		require("cursortab").setup({
 			provider = {
-				type = "sweepapi",
-				api_key_env = "SWEEPAPI_TOKEN",
+				type = "mercuryapi",
+				api_key_env = "MERCURY_AI_TOKEN",
 			},
 		})
 	end,
