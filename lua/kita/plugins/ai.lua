@@ -7,6 +7,12 @@ return {
 				type = "mercuryapi",
 				api_key_env = "MERCURY_AI_TOKEN",
 			},
+			behavior = {
+				ignore_paths = {
+					"*.csv",
+					"*.md",
+				},
+			},
 		})
 	end,
 }

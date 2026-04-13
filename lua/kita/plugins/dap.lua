@@ -1,6 +1,6 @@
 return {
 	"mfussenegger/nvim-dap-python",
-	ft = { "python", "javascript", "typescript" },
+	ft = { "python", "javascript", "typescript", "typescriptreact" },
 	build = false,
 	dependencies = {
 		{ "mfussenegger/nvim-dap", build = false },
@@ -38,9 +38,15 @@ return {
 		require("nvim-dap-virtual-text").setup({})
 
 		vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DiagnosticError", linehl = "", numhl = "" })
-		vim.fn.sign_define("DapBreakpointCondition", { text = "◉", texthl = "DiagnosticWarn", linehl = "", numhl = "" })
+		vim.fn.sign_define(
+			"DapBreakpointCondition",
+			{ text = "◉", texthl = "DiagnosticWarn", linehl = "", numhl = "" }
+		)
 		vim.fn.sign_define("DapStopped", { text = "▶", texthl = "DiagnosticOk", linehl = "", numhl = "" })
-		vim.fn.sign_define("DapBreakpointRejected", { text = "✕", texthl = "DiagnosticError", linehl = "", numhl = "" })
+		vim.fn.sign_define(
+			"DapBreakpointRejected",
+			{ text = "✕", texthl = "DiagnosticError", linehl = "", numhl = "" }
+		)
 
 		-- JavaScript setup
 		dap.adapters["pwa-node"] = {
@@ -50,19 +56,18 @@ return {
 			executable = {
 				command = "js-debug-adapter",
 				args = { "${port}" },
-			}
+			},
 		}
 
-    dap.configurations.python = {
+		dap.configurations.python = {
 			{
-        justMyCode = false,
+				justMyCode = false,
 				type = "python",
 				request = "attach",
 				name = "Attach to Port",
-        port = 5678,
-			}
+				port = 5678,
+			},
 		}
-
 
 		dap.configurations.javascript = {
 			{
@@ -74,16 +79,16 @@ return {
 				sourceMaps = true,
 				resolveSourceMapLocations = {
 					"${workspaceFolder}/**",
-					"!**/node_modules/**"
+					"!**/node_modules/**",
 				},
 				skipFiles = {
 					"<node_internals>/**",
-					"**/node_modules/**"
-				}
-			}
+					"**/node_modules/**",
+				},
+			},
 		}
 
-	dap.configurations.typescript = {
+		dap.configurations.typescriptreact = {
 			{
 				type = "pwa-node",
 				request = "attach",
@@ -93,13 +98,31 @@ return {
 				sourceMaps = true,
 				resolveSourceMapLocations = {
 					"${workspaceFolder}/**",
-					"!**/node_modules/**"
+					"!**/node_modules/**",
 				},
 				skipFiles = {
 					"<node_internals>/**",
-					"**/node_modules/**"
-				}
-			}
+					"**/node_modules/**",
+				},
+			},
+		}
+		dap.configurations.typescript = {
+			{
+				type = "pwa-node",
+				request = "attach",
+				name = "Attach to Port",
+				port = 9229,
+				cwd = "${workspaceFolder}",
+				sourceMaps = true,
+				resolveSourceMapLocations = {
+					"${workspaceFolder}/**",
+					"!**/node_modules/**",
+				},
+				skipFiles = {
+					"<node_internals>/**",
+					"**/node_modules/**",
+				},
+			},
 		}
 
 		-- evaluate var under cursor

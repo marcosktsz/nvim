@@ -92,10 +92,6 @@ return {
 
 		require("mason-lspconfig").setup({
 			automatic_enable = true,
-			ensure_installed = {
-				"ty",
-				"tsgo",
-			},
 		})
 
 		vim.lsp.inline_completion.enable()
